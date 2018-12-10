@@ -1,0 +1,52 @@
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+.banner-content .btn {
+  margin-top: 50px;
+  font-size: 21px;
+}
+
+.banner-sign-content .btn {
+  margin-top: 18px;
+  width: 170px;
+  font-size: 21px;
+}
+
+.banner-sign-content h1{
+margin-bottom: 60px;
+}
+
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  font-family: 'Lobster', cursive;
+}
+
+
+
+.banner h2 {
+ font-family: 'Lobster', cursive;
+ font-size: 32px;
+
+}
+
+
+
+
