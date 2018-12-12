@@ -1,0 +1,28 @@
+.card {
+     width: 91%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    background-color: black;
+}
+
+.card-image {
+
+  height: 50%;
+  width: 100%;
+  background-size: cover;
+}
+
+
+
+
+    .title {
+      margin: 0;
+      padding: 0 0 10px;
+      color: #ff8000;
+      font-size: 26px;
+      font-weight: 700;
+    }
