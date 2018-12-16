@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
-    before_action :set_order, only: [:show]
-    before_action :check_admin, only: [:index]
+  before_action :set_order, only: [:show]
+  before_action :check_admin, only: [:index]
   def index
     @orders = Order.all
   end
@@ -32,7 +32,7 @@ class OrdersController < ApplicationController
   end
 
   def check_admin
-    current_user.admin ? redirect_to :index : redirect_to packs_path
+    #current_user.admin ? redirect_to index : redirect_to packs_path
   end
 
   def set_order
