@@ -1,15 +1,24 @@
 <div class="container">
   <div class="row">
-    <% @packs.each do |pack|  %>
-      <div class="col col-xs-12 col-sm-4">
-        <div class="card">
-          <div class="card-image">
-          </div>
-          <div class="post-content">
-            <h1 class=" title"> <%= pack.title %></h1>
+    <div class="margin">
+      <% @packs.each do |pack|  %>
+        <div class="col col-xs-12 col-sm-6">
+          <div class="card">
+            <div class="card-image">
+            </div>
+            <div class="post-content">
+              <h1 class=" title text-center"> <%= pack.title %></h1>
+              <h2 class="sub_title text-center"> <%= image_tag("/assets/stopwatch.png")%> Delivré en 3 jours
+              </h2>
+              <h2 class="sub_title2 text-center "> <%= image_tag("/assets/coins.png")%> A partir de 0,70
+                centimes  </h2>
+              <div class="space text-center">
+                <%= link_to "Details",pack_path(pack), class: " btn-cta-nav " %>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
