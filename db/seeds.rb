@@ -3,6 +3,7 @@ Pack.destroy_all
 puts "Je suis le Dieu du Timbre"
 
 TITLES = ["Lettre Verte", "Lettre Prioritaire", "Lettre Suivie", "Recommandés"]
+POIDS = ["20g", "100g", "250g", "500g", "3kg"]
 PACKVERT = { "20g": ["0.83", "0.88"], "100g": ["1.67","1.76"], "250g": ["3.34", "3.52"], "500g": ["5","5.28"], "3kg": ["6.7","7.04"]}
 PACKPRIO = {"20g": ["1","1.05"], "100g": ["2","2.10"], "250g": ["4","4.20"], "500g": ["6","6.30"], "2kg": ["8","8.40"]}
 PRIOINTERNATIONAL = { "20g": ["1.23","1.30"], "100g": ["2.47","2.60"], "250g": ["6.17","6.5"],"500g": ["9.9","10.40"], "2kg": ["17.30","18.20"], "3kg": ["30.4","32.00"]}
@@ -14,11 +15,10 @@ RECOMMANDER3 = { "20g": ["5.75","6.05"],"50g": ["6.17","6.50"], "100g": ["6.74",
 R1INTERNATIONAL =  { "20g": ["5.5","5.80"], "100g": ["6.75","7.10"], "250g": ["10.45","11"],"500g": ["14.15","14.90"],"2kg": ["21.55","22.70"] }
 R2INTERNATIONAL =  { "20g": ["6.46","6.80"], "100g": ["7.69","8.10"], "250g": ["11.4","12"], "500g": ["15.1","15.9"],"2kg": ["22.5","23.70"] }
 
-VERT = [{"Pack Vert": PACKVERT}]
-{}
-PRIO = [{"Pack Prioritaire": PACKPRIO},{"Pack Prioritaire Internationale": PRIOINTERNATIONAL}]
-SUIVIE = [{"Pack Suivie": PACKSUIVIE},{"Pack Suivie Internationale": SUIVIEINTERNATIONAL}]
-RECO = [{"Pack R1": RECOMMANDER1}, {"Pack R2": RECOMMANDER2}, {"Pack R3": RECOMMANDER3}, {"Pack R1 Internationale": R1INTERNATIONAL}, {"Pack R2 Internationale": R2INTERNATIONAL}]
+VERT = ["Pack Vert"]
+PRIO = ["Pack Prioritaire", "Pack Prioritaire Internationale"]
+SUIVIE = ["Pack Suivie", "Pack Suivie Internationale"]
+RECO = ["Pack R1", "Pack R2", "Pack R3", "Pack R1 Internationale", "Pack R2 Internationale"]
 
 packvert = Pack.create!(title: TITLES[0], category:VERT)
 packprio = Pack.create!(title: TITLES[1], category:PRIO)

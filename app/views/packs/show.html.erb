@@ -1,0 +1,9 @@
+
+
+<%= simple_form_for([@pack, @order]) do |f| %>
+  <%= f.input :category, collection: @pack.category %>
+  <%= f.input :quantity %>
+  <%= f.input :weight, collection: ["20g", "100g", "250g", "500g", "3kg"] %>
+  <%= f.button :submit %>
+<% end %>
+
