@@ -1,58 +1,110 @@
 .card {
-     width: 91%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    height: 70vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 40px;
-    background-color: white;
-    border-radius: 9px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  height: 53vh;
+  margin-bottom: 40px;
+  background-color: white;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+
+  img {
+   padding: 6px;
+   width: 25%;
+  }
 }
 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+ .card {
+    height: 57vh;
+  }
+   .card-image {
+    height: 32% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+  width: 75vw !important;
+  }
+  .row {
+    margin-left: 17px;
+  }
+
+  .margin_bta {
+    margin-bottom: 15px;
+  }
+}
+
+
+@media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  .card {
+    height: 42vh;
+  }
+
+  .card-image {
+    height: 39% !important;
+  }
+}
+
+
+
+
 .card-image {
-  background-color: #E05059;
- background-image: url('truc.png');
-    height: 43%;
+
+
+  height: 36%;
   width: 100%;
   background-size: cover;
   border-radius: 10px 10px 0px 0px;
 }
 
 
-  .post-content {
-       bottom: 0;
-    background: white;
-    width: 100%;
-    border-radius: 12px;
-    padding: 18px;
-    }
 
 
-    .title {
-      margin: 0;
-      padding: 0 0 30px;
-      color: black;
-      font-size: 26px;
-      font-weight: 700;
-    }
-    .sub_title {
-      margin: 0;
-      padding: 0 0 30px;
-      color: gray;
-      font-size: 20px;
-      font-weight: 400;
-    }
 
-      .sub_title2 {
-      margin: 0;
-      padding: 0 0 30px;
-      color: gray;
-      font-size: 20px;
-      font-weight: 400;
-    }
+.post-content {
+
+  background: white;
+  width: 100%;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 0;
+  }
+
+
+.title {
+  margin: 0;
+  padding: 0 16px 30px;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+
+}
+.sub_title {
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  float: left;
+}
+
+  .sub_title2 {
+  margin: 0;
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  float: left;
+}
 
 .margin {
   margin-top: 4%;
-      margin-left: 7%;
 }
+
+.margin_bta {
+  margin-top: 10px;
+}
+
