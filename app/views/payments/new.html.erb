@@ -1,0 +1,19 @@
+<!-- app/views/payments/new.html.erb -->
+<h1>Purchase of  <%= @order.pack_sku %></h1>
+<%= form_tag pack_order_payments_path(@pack, @order) do %>
+  <article>
+    <label class="amount">
+      <span>Amount: <%= humanized_money_with_symbol(@order.price) %></span>
+    </label>
+  </article>
+
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name="My Pack de Timbre"
+    data-email="<%= current_user.email %>"
+    data-description="Teddy <%= @order.pack_sku %>"
+    data-amount="<%= @order.price_cents %>"
+    data-currency="<%= @order.price.currency %>"></script>
+
+<% end %>
