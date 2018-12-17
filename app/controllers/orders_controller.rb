@@ -32,7 +32,11 @@ class OrdersController < ApplicationController
   end
 
   def check_admin
-    #current_user.admin ? redirect_to index : redirect_to packs_path
+    if current_user.admin
+      redirect_to pack_orders_path
+    else
+      redirect_to packs_path
+    end
   end
 
   def set_order

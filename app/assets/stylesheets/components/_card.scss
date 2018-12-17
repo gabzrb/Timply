@@ -1,33 +1,58 @@
 .card {
      width: 91%;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    height: 500px;
+    height: 70vh;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     margin-bottom: 40px;
-    background-color: black;
+    background-color: white;
+    border-radius: 9px;
 }
 
 .card-image {
-
-  height: 50%;
+  background-color: #E05059;
+ background-image: url('truc.png');
+    height: 43%;
   width: 100%;
   background-size: cover;
+  border-radius: 10px 10px 0px 0px;
 }
 
 
+  .post-content {
+       bottom: 0;
+    background: white;
+    width: 100%;
+    border-radius: 12px;
+    padding: 18px;
+    }
 
 
     .title {
       margin: 0;
-      padding: 0 0 10px;
-      color: #ff8000;
+      padding: 0 0 30px;
+      color: black;
       font-size: 26px;
       font-weight: 700;
     }
-
-
-    .margin {
-      margin-top: 9%;
+    .sub_title {
+      margin: 0;
+      padding: 0 0 30px;
+      color: gray;
+      font-size: 20px;
+      font-weight: 400;
     }
+
+      .sub_title2 {
+      margin: 0;
+      padding: 0 0 30px;
+      color: gray;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+.margin {
+  margin-top: 4%;
+      margin-left: 7%;
+}
