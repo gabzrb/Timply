@@ -1,1 +1,9 @@
-<% raise %>
+<p>Prix La Poste: <%= humanized_money_with_symbol(@la_poste_price) %></p>
+
+<p>Notre Prix: <%= humanized_money_with_symbol(@order.price) %></p>
+
+<p>Reduction: <%= humanized_money_with_symbol(@reduction) %></p>
+<%= link_to "Payer", new_pack_order_payment_path(
+    @order.pack_id, @order) %>
+
+

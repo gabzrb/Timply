@@ -18,13 +18,15 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @la_poste_price = (PACKS[@order.category.to_sym][@order.weight.to_sym].last.to_f)*@order.quantity.to_i
+    @la_poste_price = Money.new(((PACKS[@order.category.to_sym][@order.weight.to_sym].last.to_f)*@order.quantity.to_i)* 100, 'EUR')
     @reduction = @la_poste_price - @order.price
   end
 
   def create
     @pack = Pack.find(params[:pack_id])
     @order = Order.new(order_params)
+    @order.pack_sku = @order.category
+    @order.state = 'pending'
     @order.price = (PACKS[@order.category.to_sym][@order.weight.to_sym].first.to_f)*@order.quantity.to_i
     @order.user_id = current_user.id
     @order.pack_id = @pack.id
