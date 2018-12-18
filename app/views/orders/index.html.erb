@@ -1,2 +1,8 @@
 <h1>Admin Dashboard</h1>
-<%= Order.all %>
+<% @orders.each do |order| %>
+<p><%= order.user.email %></p>
+<p><%= order.state %></p>
+<p><%= link_to "Tracking Number: #{order.tracking}", edit_order_path(order) %></p>
+<p><%= link_to "Effacer la commande", order_path(order), method: :delete  if order.state == 'pending'%></p>
+<% end %>
+

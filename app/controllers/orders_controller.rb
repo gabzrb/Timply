@@ -11,7 +11,7 @@ PACKS = {"Pack Vert": { "20g": ["0.83", "0.88"], "100g": ["1.67","1.76"], "250g"
 
 
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show]
+  before_action :set_order, only: [:show, :destroy, :edit, :update]
   before_action :check_admin, only: [:index]
   def index
     @orders = Order.all
@@ -38,10 +38,30 @@ class OrdersController < ApplicationController
     end
   end
 
+  def destroy
+    @order.destroy
+    redirect_to orders_path
+  end
+
+  def edit
+  end
+
+  def update
+    if @order.update(order_edit_params)
+      redirect_to orders_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def order_params
     params.require(:order).permit(:category, :weight, :quantity)
+  end
+
+  def order_edit_params
+    params.require(:order).permit(:tracking)
   end
 
   def check_admin
