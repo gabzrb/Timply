@@ -45,11 +45,7 @@ class OrdersController < ApplicationController
   end
 
   def check_admin
-    if current_user.admin
-      redirect_to pack_orders_path
-    else
-      redirect_to packs_path
-    end
+    redirect_to packs_path if !(current_user.admin)
   end
 
   def set_order
