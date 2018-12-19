@@ -4,11 +4,16 @@
       <% @packs.each do |pack|  %>
         <div class="col col-xs-12 col-sm-6 col-md-3">
           <div class="card">
-            <div class="card-image" style="background-image:
- url(<%= image_path 'truc.png' %>);">
-            </div>
+            <% if pack.photo.nil? %>
+              <div class="card-image" style="background-image:
+url(<%= image_path 'truc.png'  %>);">
+              </div>
+            <% else %>
+              <div class="card-image" style="background-image:
+url(<%= pack.photo  %>);">
+              </div>
+            <% end %>
             <div class="post-content">
-              <h1 class=" title text-center"> <%= pack.title %></h1>
               <div class="sub_title text-center">
                 <p> <%= image_tag("/assets/stopwatch.png")%> Delivré en 3 jours
                 </p>
@@ -19,7 +24,7 @@
               </div>
             </div>
             <div class=" text-center">
-              <%= link_to "Details",pack_path(pack), class: " btn-cta " %>
+              <%= link_to "Details",pack_path(pack), class: " btn-card " %>
             </div>
           </div>
         </div>

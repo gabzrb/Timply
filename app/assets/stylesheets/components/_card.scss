@@ -1,7 +1,7 @@
 .card {
   width: 100%;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  height: 53vh;
+  height: 51vh;
   margin-bottom: 40px;
   background-color: white;
   border-radius: 9px;
@@ -13,23 +13,25 @@
    width: 25%;
   }
 }
+// iphone 5
 
+
+
+
+// iphone X
 @media only screen
   and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2) {
- .card {
-    height: 57vh;
-  }
-   .card-image {
-    height: 32% !important;
-  }
-}
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3) {
 
-@media only screen and (max-width: 600px) {
-  .card {
-  width: 75vw !important;
+
+ .card {
+  width:78vw;
+  height: 54vh;
   }
+
+
+
   .row {
     margin-left: 17px;
   }
@@ -37,17 +39,60 @@
   .margin_bta {
     margin-bottom: 15px;
   }
+
 }
 
-
-@media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) {
-
+// iphone 6
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+and (-webkit-min-device-pixel-ratio: 2){
   .card {
-    height: 42vh;
+  width: 75vw ;
+  height: 62vh;
+  }
+
+    .card-image {
+   height: 50% ;
+ }
+.row {
+    margin-left: 17px;
+  }
+
+
+}
+
+// iphone 6+
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+ .card {
+ width: 65vw;
+    height: 53vh;
   }
 
   .card-image {
-    height: 39% !important;
+   height: 50% ;
+   padding: 20px;
+  }
+}
+
+// ipad
+@media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  .card {
+    height: 35vh;
+    width: 80%;
+  }
+
+
+.row {
+      margin-left: 100px !important;
+    margin-right: 11px;
+}
+  .card-image {
+    height: 41% !important;
   }
 }
 
@@ -57,7 +102,7 @@
 .card-image {
 
 
-  height: 36%;
+  height: 45%;
   width: 100%;
   background-size: cover;
   border-radius: 10px 10px 0px 0px;
@@ -72,19 +117,15 @@
   background: white;
   width: 100%;
   border-radius: 12px;
-  padding: 18px;
+  padding: 9px;
   margin: 0;
   }
 
-
-.title {
-  margin: 0;
-  padding: 0 16px 30px;
-  color: black;
-  font-size: 20px;
-  font-weight: 700;
-
+.post-content p {
+  font-weight: 900;
 }
+
+
 .sub_title {
   color: black;
   font-size: 15px;
