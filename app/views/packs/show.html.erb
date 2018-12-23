@@ -1,9 +1,27 @@
-
-
-<%= simple_form_for([@pack, @order]) do |f| %>
-  <%= f.input :category, collection: @pack.category %>
-  <%= f.input :quantity %>
-  <%= f.input :weight, collection: ["20g", "100g", "250g", "500g", "3kg"] %>
-  <%= f.button :submit %>
-<% end %>
-
+<div class="container">
+  <div class="margin">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-8">
+        <div class="a">
+          <%= image_tag(@pack.photo)%>
+          <h4>Details: </h4>
+          <p>  <%= @pack.infos %></p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="form-group">
+          <%= simple_form_for([@pack, @order]) do |f| %>
+            <div class="form-row">
+              <div class="col-md-5">
+                <%= f.input :category, collection: @pack.category %>
+                <%= f.input :quantity %>
+                <%= f.input :weight, collection: ["20g", "100g", "250g", "500g", "3kg"] %>
+                <%= f.button :submit,"Recevez vos prix",class: " btn-card "%>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
