@@ -1,4 +1,4 @@
-<% Order.where(user_id: current_user.order_ids).each do |order| %>
+<% Order.where(id: current_user.order_ids).each do |order| %>
   <p><%= order.pack_sku %></p>
   <p> order.pack_id</p>
   <p><%= order.state %></p>
