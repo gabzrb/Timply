@@ -7,9 +7,9 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to "Admin", orders_path, class: "navbar-wagon-item navbar-wagon-link" if current_user.admin %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Adminitrateur", orders_path, class: "navbar-wagon-item navbar-wagon-link" if current_user.admin %>
+      <%= link_to 'Commander', packs_path, class: " btn btn-cta-nav center-block navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to 'Vos commandes', dashboard_path, class: " btn btn-primary center-block navbar-wagon-item navbar-wagon-link" %>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
@@ -21,7 +21,7 @@
               <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to edit_user_registration_path do %>
                 <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
               <% end %>
             </li>
@@ -45,9 +45,27 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <% if user_signed_in? %>
+                    <li>
+              <%= link_to edit_user_registration_path do %>
+                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
+              <% end %>
+            </li>
+                        <li>
+              <%= link_to dashboard_path do %>
+                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+              <% end %>
+            </li>
+            <li>
+                          <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <% end %>
+            </li>
+        <% else %>
+              <li>      <%= link_to 'Inscription', new_user_registration_path, class: " btn btn-primary center-block navbar-wagon-item navbar-wagon-link" %></li>
+        <li>      <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+        <% end %>
       </ul>
     </div>
   </div>
