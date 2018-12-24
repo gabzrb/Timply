@@ -1,34 +1,38 @@
-<div class="container">
-  <div class="row">
-    <div class="margin">
-      <% @packs.each do |pack|  %>
-        <div class="col col-xs-12 col-sm-6 col-md-3">
-          <div class="card">
-            <% if pack.photo.nil? %>
-              <div class="card-image" style="background-image:
+<div class="banner" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);
+ url(<%= image_path 'banner2.png' %>);">
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center">Nos packs d'enveloppes pré-timbrées</h1>
+      <div class="margin">
+        <% @packs.each do |pack|  %>
+          <div class="col col-xs-12 col-sm-6 col-md-3">
+            <div class="card">
+              <% if pack.photo.nil? %>
+                <div class="card-image" style="background-image:
 url(<%= image_path 'truc.png'  %>);">
-              </div>
-            <% else %>
-              <div class="card-image" style="background-image:
+                </div>
+              <% else %>
+                <div class="card-image" style="background-image:
 url(<%= pack.photo  %>);">
+                </div>
+              <% end %>
+              <div class="post-content">
+                <div class="sub_title text-center">
+                  <p> <%= image_tag("/assets/stopwatch.png")%> <%= pack.delivered  %>
+                  </p>
+                </div>
+                <div class="sub_title2 text-center ">
+                  <p> <%= image_tag("/assets/coins.png")%> <%= pack.description %>
+                  </p>
+                </div>
               </div>
-            <% end %>
-            <div class="post-content">
-              <div class="sub_title text-center">
-                <p> <%= image_tag("/assets/stopwatch.png")%> Delivré en 3 jours
-                </p>
+              <div class=" text-center">
+                <%= link_to "Details",pack_path(pack), class: " btn-card " %>
               </div>
-              <div class="sub_title2 text-center ">
-                <p> <%= image_tag("/assets/coins.png")%> A partir de 0,70€
-                </p>
-              </div>
-            </div>
-            <div class=" text-center">
-              <%= link_to "Details",pack_path(pack), class: " btn-card " %>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
