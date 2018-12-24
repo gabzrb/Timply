@@ -19,7 +19,7 @@ class OrdersController < ApplicationController
 
   def show
     @la_poste_price = Money.new(((PACKS[@order.category.to_sym][@order.weight.to_sym].last.to_f)*@order.quantity.to_i)* 100, 'EUR')
-    @reduction = @la_poste_price - @order.price
+    @reduction = @order.reduction
   end
 
   def create
@@ -28,13 +28,14 @@ class OrdersController < ApplicationController
     @order.pack_sku = @order.category
     @order.state = 'pending'
     @order.price = (PACKS[@order.category.to_sym][@order.weight.to_sym].first.to_f)*@order.quantity.to_i
+    @order.reduction = Money.new(((PACKS[@order.category.to_sym][@order.weight.to_sym].last.to_f)*@order.quantity.to_i)* 100, 'EUR') - @order.price
     @order.user_id = current_user.id
     @order.pack_id = @pack.id
     if @order.save!
       redirect_to pack_order_path(@pack, @order)
     else
       flash.now[:error] = "Oops, something went wrong. Please try again"
-      render :new
+      redirect_to pack_path(@pack)
     end
   end
 
