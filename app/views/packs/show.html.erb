@@ -1,27 +1,50 @@
-<div class="container">
-  <div class="margin">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-8">
-        <div class="a">
-          <%= image_tag(@pack.photo)%>
-          <h4>Details: </h4>
-          <p>  <%= @pack.infos %></p>
+<div class="body" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);">
+  <div class="container">
+    <div class="margin">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-7">
+          <div class="a">
+            <%= image_tag(@pack.photo)%>
+            <div class="detail text-center">
+              <h4 > <strong> Details </strong> </h4>
+              <p>  <%= @pack.infos %></p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="form-group">
-          <%= simple_form_for([@pack, @order]) do |f| %>
-            <div class="form-row">
-              <div class="col-md-5">
-                <%= f.input :category, collection: @pack.category %>
-                <%= f.input :quantity %>
-                <%= f.input :weight, collection: ["20g", "100g", "250g", "500g", "3kg"] %>
-                <%= f.button :submit,"Recevez vos prix",class: " btn-card "%>
-              <% end %>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="card_form">
+            <div class="price">
+              <h1> 0.80€ </h1>
+              <h3> 0,88€</h3>
+            </div>
+            <div class="form-group">
+              <%= simple_form_for([@pack, @order]) do |f| %>
+                <div class="form-row">
+                  <div class="col-md-9">
+                    <%= f.input :category, collection: @pack.category, label: "Type d'envoi" %>
+                    <%= f.input :quantity, label: "Quantité" %>
+                    <%= f.input :weight, collection: ["20g", "100g", "250g", "500g", "3kg"],label: "Poids" %>
+                    <%= f.button :submit,"Recevez vos prix",class: " btn-card "%>
+                  <% end %>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <h1 class="text-center margin2"> Nos autres produits </h1>
+  <div class="container ">
+    <div class="row">
+      <% @packs.each do |pack| %>
+        <div class="col-xs-12 col-sm-6 col-md-4
+        ">
+          <div class=" b ">
+            <%= link_to image_tag(pack.photo), pack_path(pack)%>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
