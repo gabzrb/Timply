@@ -3,6 +3,6 @@ class Order < ApplicationRecord
   belongs_to :pack
   validates :category, presence: true
   validates :weight, presence: true
-  validates :quantity, presence: true, :numericality => { greater_than: 9 }
+  validates :quantity, presence: true
   monetize :price_cents
 end
