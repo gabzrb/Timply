@@ -1,0 +1,42 @@
+.banner-order {
+  color: black;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.card_order {
+width: 50vw;
+height: 54vh;
+
+background-color: white;
+border-radius: 5px;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+}
+
+
+
+.card_order2 {
+    width: 20vw;
+    height: 21vh;
+    background-color: white;
+    border-radius: 2px;
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 18%;
+}
+
+.card_order2_content {
+  max-width: 32%;
+}

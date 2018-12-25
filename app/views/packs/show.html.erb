@@ -18,7 +18,7 @@
               <h3> 0,88€</h3>
             </div>
             <div class="form-group">
-              <%= simple_form_for([@pack, @order]) do |f| %>
+              <%= simple_form_for([@pack, @order])do |f| %>
                 <div class="form-row">
                   <div class="col-md-9">
                     <%= f.input :category, collection: @pack.category, label: "Type d'envoi" %>

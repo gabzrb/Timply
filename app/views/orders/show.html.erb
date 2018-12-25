@@ -1,7 +1,16 @@
-<p>Prix La Poste: <%= humanized_money_with_symbol(@la_poste_price) %></p>
-
-<p>Notre Prix: <%= humanized_money_with_symbol(@order.price) %></p>
-
-<p>Reduction: <%= humanized_money_with_symbol(@reduction) %></p>
-<%= link_to "Payer", new_pack_order_payment_path(
+<div class="banner-order" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);">
+  <div class="card_order">
+    <h3><%= @order.category  %></h3>
+    <p>Prix La Poste: <%= humanized_money_with_symbol(@la_poste_price) %></p>
+    <p>Notre Prix: <%= humanized_money_with_symbol(@order.price) %></p>
+    <p>Reduction: <%= humanized_money_with_symbol(@reduction) %></p>
+    <%= link_to "Procéder au paiement", new_pack_order_payment_path(
     @order.pack_id, @order) %>
+  </div>
+  <div class="card_order2">
+    <div class="card_order2_content">
+      <p> <strong>Quantité:</strong> <%= @order.quantity  %> enveloppes </p>
+      <p> <strong>Poids:</strong> <%= @order.weight %></p>
+    </div>
+  </div>
+</div>
