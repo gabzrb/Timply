@@ -1,19 +1,59 @@
 <!-- app/views/payments/new.html.erb -->
-<h1>Purchase of  <%= @order.pack_sku %></h1>
-<%= form_tag pack_order_payments_path(@pack, @order) do %>
-  <article>
-    <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@order.price) %></span>
-    </label>
-  </article>
-
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+<div class="banner-order" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);">
+  <div class="container text-center">
+    <div class="margin">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="card_confirm_order">
+            <h3> Récapitulatif de la commande: </h3>
+            <div class="card_recapitulatif">
+              <div class="line_confirmation">
+                <h5> Votre pack</h5>
+                <p> <%=@order.user.name %></p>
+                <p> <%=@order.user.entreprise %></p>
+              </div>
+              <div class="line_confirmation">
+                <p>  <%= @order.pack_sku %></p>
+                <p> <%= @order.quantity  %> enveloppes</p>
+                <p> <%= @order.weight %> </p>
+              </div>
+              <%= form_tag pack_order_payments_path(@pack, @order) do %>
+                <article>
+                  <label class="amount">
+                    <span>Montant: <%= humanized_money_with_symbol(@order.price) %></span>
+                  </label>
+                </article>
+              </div>
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="My Pack de Timbre"
+    data-name="Mon Pack de Timbre"
     data-email="<%= current_user.email %>"
     data-description="Teddy <%= @order.pack_sku %>"
     data-amount="<%= @order.price_cents %>"
     data-currency="<%= @order.price.currency %>"></script>
-
-<% end %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="color">
+            <h3 > Merci d'indiquer vos informations de paiement </h3>
+            <p> Timply est sans engagement. Le paiement est 100% securisé</p>
+          </div>
+          <div class="card_info">
+            <div class="ordinfo">
+              <%= image_tag   "personne.png", height: 120 %>
+              <p> Timply est sans engagement</p>
+              <%= image_tag   "secure.png", height: 120 %>
+              <p>Paiement 100% sécurisé</p>
+              <%= image_tag   "suivi.png", height: 120 %>
+              <p> Envoi en lettre recommandée avec un numéro de suivi. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="margin_contact2">
+      <p><strong>Pour toute autre question, n'hesitez pas à nous contacter</strong> </p>
+    </div>
+  </div>
+</div>
