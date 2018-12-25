@@ -5,5 +5,5 @@
   <p><%= humanized_money_with_symbol(order.price) %></p>
   <%= link_to "Payer", new_pack_order_payment_path(order.pack_id, order) if order.state == 'pending'%>
   <hr>
-  <h1>Mes economies: <%= @all_reduction %>EUR</h1>
 <% end %>
+<h1>Mes economies: <%= @all_reduction %>EUR</h1>
