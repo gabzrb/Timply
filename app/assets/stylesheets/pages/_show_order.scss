@@ -1,42 +1,49 @@
 .banner-order {
   color: black;
-  text-align: center;
+
   height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
 }
 
+
+.row1 {
+  margin-left: 30%;
+}
 
 .card_order {
-width: 50vw;
-height: 54vh;
-
-background-color: white;
-border-radius: 5px;
-    display: flex;
-    justify-content:space-around;
-    flex-direction: column;
-}
-
-
-
-.card_order2 {
-    width: 20vw;
-    height: 21vh;
+    width: 26vw;
+    height: 82vh;
     background-color: white;
-    border-radius: 2px;
+    border-radius: 5px;
     display: flex;
-    margin-left: 10px;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    margin-bottom: 18%;
 }
 
-.card_order2_content {
-  max-width: 32%;
+.card_order h3 {
+  margin-bottom: 5px;
 }
+
+
+.line {
+     border-top: 2px solid #518CE4;
+    width: 70%;
+    padding: 3%;
+
+        display: flex;
+    justify-content: center;
+}
+
+.line_category {
+ border-top: 2px solid #518CE4;
+    width: 70%;
+    padding: 3%;
+border-bottom: 2px solid #518CE4;
+        display: flex;
+    justify-content: center;
+}
+
+
