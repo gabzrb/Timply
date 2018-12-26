@@ -1,14 +1,12 @@
-
+<div class="text-center dashboard_upcard">
+  <h2 style=" color: #308edc">Mes economies: <%= @all_reduction %>EUR</h2>
+  <hr>
+</div>
 <div class="body" style="background-color: #ffffff">
-  <div class="text-center">
-    <h1 style="color: #308edc">Mes economies: <%= @all_reduction %>EUR</h1>
-    <hr>
-  </div>
+  <hr>
   <% @orders.each do |order| %>
     <div class="dashboard_card">
-      <div class="flex-item">
-        <%= image_tag(order.pack.photo) %>
-      </div>
+      <%= image_tag(order.pack.photo) %>
       <p><%= order.pack_sku %></p>
       <p> <%= order.quantity %> Enveloppes </p>
       <p> <%= order.weight %> </p>
@@ -21,4 +19,3 @@
     <hr>
   <% end %>
 </div>
-
