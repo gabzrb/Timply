@@ -1,8 +1,10 @@
-<div class="banner" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);
+<div class="cover" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);
  url(<%= image_path 'banner2.png' %>);">
   <div class="container">
     <div class="row">
-      <h1 class="text-center">Nos packs d'enveloppes pré-timbrées</h1>
+      <div class="writing">
+        <h1 class="text-center ">Nos packs d'enveloppes pré-timbrées</h1>
+      </div>
       <div class="margin">
         <% @packs.each do |pack|  %>
           <div class="col col-xs-12 col-sm-6 col-md-3">

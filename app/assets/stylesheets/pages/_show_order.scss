@@ -46,4 +46,39 @@ border-bottom: 2px solid #518CE4;
     justify-content: center;
 }
 
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+and (-webkit-min-device-pixel-ratio: 2){
+
+  .card_order {
+    width: 81vw;
+    height: 82vh;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+     .card_info {
+     width: 96% !important;
+      background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: #2E5FDE;
+    margin-top: 6%;
+    margin-left: 0% !important;
+  }
+
+  .color {
+    color: white;
+    margin-right: 7%;
+}
+}
+
 

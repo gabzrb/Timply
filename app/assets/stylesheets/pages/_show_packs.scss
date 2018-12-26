@@ -4,6 +4,7 @@
     margin-top: 4%;
     width: 26vw;
     margin-left: 10%;
+    display: flex;
  }
 
 .b {
@@ -11,6 +12,7 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+      margin-top: 2%;
 
 }
 
@@ -57,6 +59,46 @@ border-radius: 10px;
     display: block;
 }
 
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+and (-webkit-min-device-pixel-ratio: 2){
+
+.card_form {
+width: 79vw;
+height: 62vh;
+margin-top: 4%;
+background-color: white;
+border-radius: 10px;
+    display: block;
+}
+
+.form-group {
+margin-left: 1% !important;
+}
+ .a img {
+    border-radius: 10px;
+    margin-top: 4%;
+    width: 58vw;
+    margin-left: 10%;
+    display: flex;
+    }
+.detail {
+display: block;
+   max-width: 90%;
+   color: white;
+}
+
+.b img {
+  width: 74vw;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+
+}
+
 .card_pack {
 width: 40vw;
 height:   62vh;
@@ -76,8 +118,23 @@ margin-top: 1%;
 
 
 .form-group {
-      margin-left: 30px;
+
+
+margin-left: 11%;
+
 }
+
+.btn-form {
+         padding: 7px 31px;
+         border: 1px solid #308edc;
+    border-radius: 7px;
+    color: white;
+    background-color: #308edc;
+        margin-left: 10px;
+
+}
+
+
 
 .margin2 {
  margin-top: 6%;
