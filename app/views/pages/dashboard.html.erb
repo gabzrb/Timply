@@ -1,9 +1,24 @@
-<% @orders.each do |order| %>
-  <p><%= order.pack_sku %></p>
-  <p> order.pack_id</p>
-  <p><%= order.state %></p>
-  <p><%= humanized_money_with_symbol(order.price) %></p>
-  <%= link_to "Payer", new_pack_order_payment_path(order.pack_id, order) if order.state == 'pending'%>
-  <hr>
-<% end %>
-<h1>Mes economies: <%= @all_reduction %>EUR</h1>
+
+<div class="body" style="background-color: #ffffff">
+  <div class="text-center">
+    <h1 style="color: #308edc">Mes economies: <%= @all_reduction %>EUR</h1>
+    <hr>
+  </div>
+  <% @orders.each do |order| %>
+    <div class="dashboard_card">
+      <div class="flex-item">
+        <%= image_tag(order.pack.photo) %>
+      </div>
+      <p><%= order.pack_sku %></p>
+      <p> <%= order.quantity %> Enveloppes </p>
+      <p> <%= order.weight %> </p>
+      <p><%= order.state %></p>
+      <p><%= humanized_money_with_symbol(order.price) %></p>
+      <div class="btn btn-cta ">
+        <%= link_to "Payer", new_pack_order_payment_path(order.pack_id, order) if order.state == 'pending' %>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+</div>
+

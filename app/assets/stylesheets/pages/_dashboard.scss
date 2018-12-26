@@ -1,0 +1,26 @@
+
+.dashboard_card {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+      flex-grow: 1;
+      padding: 22px;
+
+}
+
+.dashboard_card img {
+
+   border-radius: 10px;
+    height: 27vh;
+    width: 21vw;
+    position: relative;
+
+}
+
+    hr {
+
+
+    border-top: 1px solid #eeeeee;
+    }
