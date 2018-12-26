@@ -14,8 +14,13 @@
       <p><%= humanized_money_with_symbol(order.price) %></p>
       <div class="btn btn-cta ">
         <%= link_to "Payer", new_pack_order_payment_path(order.pack_id, order) if order.state == 'pending' %>
+        <%= link_to "Supprimer", order_path(order), :method => :delete, data: {:confirm => "Etes-vous sure?" } if order.state == 'pending' %>
       </div>
     </div>
     <hr>
   <% end %>
+
+    <%= paginate @orders %>
+ 
 </div>
+

@@ -18,6 +18,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'money-rails'
 gem 'stripe'
+gem 'kaminari'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
