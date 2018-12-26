@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @orders = Order.where(id: current_user.order_ids)
+    @packs = Pack.where(id: current_user.order_ids)
     @all_reduction = 0
     if @orders
       @orders.each do |order|
