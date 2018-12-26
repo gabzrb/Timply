@@ -1,4 +1,27 @@
 
+.dashboard_upcard {
+  width:100%;
+  background-color: #ffffff;
+      margin-top: 2px;
+          margin-bottom: 3%;
+}
+
+.dashboard_upcard h2 {
+  margin-top: 1px;
+  padding-top: 6px;
+  font-size: 30px;
+}
+
+
+.dashboard_tabs {
+  display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+      flex-grow: 1;
+      padding: 22px;
+}
 .dashboard_card {
     display: flex;
     flex-direction: row;

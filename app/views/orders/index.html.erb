@@ -1,11 +1,19 @@
-<h1>Admin Dashboard</h1>
-<% @orders.each do |order| %>
-  <p><%= order.id %></p>
-  <p><%= order.user_id %></p>
-  <p><%= order.user.email %></p>
-  <p><%= order.user.name  %></p>
-  <p><%= order.state %></p>
-  <p><%= order.price %>€</p>
-  <p><%= link_to "Tracking Number: #{order.tracking}", edit_order_path(order) %></p>
-  <p><%= link_to "Effacer la commande", order_path(order), method: :delete  if order.state == 'pending'%></p>
-<% end %>
+<div class="body" style="background-color: #ffffff">
+  <hr>
+  <div class="text-center">
+    <h1>Admin Dashboard</h1>
+  </div>
+  <% @orders.each do |order| %>
+    <div class="dashboard_card">
+      <p><%= order.id %></p>
+      <p><%= order.user_id %></p>
+      <p><%= order.user.email %></p>
+      <p><%= order.user.name  %></p>
+      <p><%= order.user.entreprise  %></p>
+      <p><%= order.state %></p>
+      <p><%= order.price %>€</p>
+      <p><%= link_to "Tracking Number: #{order.tracking}", edit_order_path(order) %></p>
+      <p><%= link_to "Effacer la commande", order_path(order), method: :delete  if order.state == 'pending'%></p>
+    </div>
+    <hr>
+  <% end %>
