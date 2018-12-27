@@ -135,11 +135,11 @@ and (-webkit-min-device-pixel-ratio: 2){
 
 .post-content {
 
-  background: white;
-  width: 100%;
-  border-radius: 12px;
-  padding: 9px;
-  margin: 0;
+      background: white;
+    width: 100%;
+    border-radius: 12px;
+    padding: 8px;
+    margin-bottom: 24px;
   }
 
 .post-content p {
@@ -148,19 +148,32 @@ and (-webkit-min-device-pixel-ratio: 2){
 
 
 .sub_title {
-  color: black;
-  font-size: 15px;
-  font-weight: 400;
-  float: left;
+     color: black;
+    font-size: 15px;
+    font-weight: 400;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
+
+
+
   .sub_title2 {
-  margin: 0;
-  color: black;
-  font-size: 15px;
-  font-weight: 400;
-  float: left;
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
+
+
+
 
 .margin {
   margin-top: 4%;

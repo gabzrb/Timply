@@ -20,15 +20,17 @@ url(<%= pack.photo  %>);">
               <% end %>
               <div class="post-content">
                 <div class="sub_title text-center">
-                  <p> <%= image_tag"stopwatch.png"%> <%= pack.delivered  %>
+                  <%= image_tag("stopwatch.png")%>
+                  <p> <%= pack.delivered %>
                   </p>
                 </div>
                 <div class="sub_title2 text-center ">
-                  <p> <%= image_tag"coins.png"%> <%= pack.description %>
+                  <%= image_tag("coins.png")%>
+                  <p><%= pack.description%>
                   </p>
                 </div>
               </div>
-              <div class=" text-center">
+              <div class="  text-center">
                 <%= link_to "Details",pack_path(pack), class: " btn-card " %>
               </div>
             </div>
