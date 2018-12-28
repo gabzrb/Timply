@@ -29,7 +29,12 @@
   width:78vw;
   height: 54vh;
   }
-
+.card-image {
+height: 39%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 7px 7px 0px 0px;
+    display: flex; }
 
 
   .row {
@@ -39,6 +44,18 @@
   .margin_bta {
     margin-bottom: 15px;
   }
+
+  .cover {
+      color: white;
+  text-align: center;
+   height: auto !important;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
 
 }
 
@@ -62,7 +79,7 @@ and (-webkit-min-device-pixel-ratio: 2){
 .cover {
       color: white;
   text-align: center;
-   height: none !important;
+   height: auto !important;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -86,7 +103,7 @@ and (-webkit-min-device-pixel-ratio: 2){
 .cover{
       color: white;
   text-align: center;
-  height: none !important;
+   height: auto !important;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
