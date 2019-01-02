@@ -12,13 +12,14 @@ PACKS = {"Pack Vert": { "20g": ["0.83", "0.88"], "100g": ["1.67","1.76"], "250g"
 
 
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :destroy, :edit, :update, :order_confirmation]
+  before_action :set_order, only: [:show, :destroy, :edit, :update]
   before_action :check_admin, only: [:index]
   def index
     @orders = Order.all
   end
 
   def order_confirmation
+    @order = Order.find(params[:format])
   end
 
   def show
