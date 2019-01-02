@@ -3,7 +3,6 @@ class PaymentsController < ApplicationController
 
   def new
     @pack = Pack.find(params[:pack_id])
-
   end
 
   def create
@@ -20,8 +19,6 @@ class PaymentsController < ApplicationController
       description:  "Paiment pour une commande de timbres",
       currency:     @order.price.currency
     )
-
-
     @order.update(payment: charge.to_json, state: 'paid')
     redirect_to pack_order_path(@pack, @order)
 

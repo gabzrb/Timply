@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :orders, only: [ :index, :destroy, :update, :edit ]
   resources :packs, only: [ :index, :show ] do
-    resources :orders, only: [ :show, :new, :create ] do
+    resources :orders, only: [ :show, :create ] do
       resources :payments, only: [:new, :create]
     end
   end
