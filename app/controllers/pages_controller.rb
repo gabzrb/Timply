@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @orders = Order.where(id: current_user.order_ids).page params[:page]
+    @orders = Order.where(id: current_user.order_ids).reverse
     @packs = Pack.where(id: current_user.order_ids)
     @all_reduction = 0
     if @orders
