@@ -20,7 +20,7 @@ class PaymentsController < ApplicationController
       currency:     @order.price.currency
     )
     @order.update(payment: charge.to_json, state: 'paid')
-    redirect_to pack_order_path(@pack, @order)
+    redirect_to order_confirmation_path(@order)
 
   rescue Stripe::CardError => e
     flash[:alert] = e.message
