@@ -32,7 +32,8 @@ class OrdersController < ApplicationController
     @order.pack_sku = @order.category.gsub(' ', '-')
     @order.state = 'pending'
     @order.price = (PACKS[@order.category.to_sym][@order.weight.to_sym].first.to_f)*@order.quantity.to_i if (@order.quantity && @order.weight != "")
-    @order.price += Money.new(115, 'EUR') if @order.ar
+    @order.price += Money.new(115, 'EUR') if ["Pack R1", "Pack R2", "Pack R3"].include?(@order.category)
+    @order.price += Money.new(140, 'EUR') if ["Pack R1 Internationale", "Pack R2 Internationale"].include?(@order.category)
     @order.reduction = Money.new(((PACKS[@order.category.to_sym][@order.weight.to_sym].last.to_f)*@order.quantity.to_i)* 100, 'EUR') - @order.price if (@order.quantity && @order.weight != "")
     @order.user_id = current_user.id
     @order.pack_id = @pack.id
@@ -68,7 +69,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:category, :weight, :quantity, :ar)
+    params.require(:order).permit(:category, :weight, :quantity, :ar, :pb, :format)
   end
 
   def order_edit_params

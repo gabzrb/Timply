@@ -24,7 +24,9 @@
                     <%= f.input :category, collection: @pack.category, label: "Type d'envoi", required: true %>
                     <%= f.input :quantity, label: "Quantité", required: true %>
                     <%= f.input :weight, collection: ["20g", "100g", "250g", "500g", "3kg"],label: "Poids", required: true %>
+                    <%= f.input :format, collection: ["1","2"],label: "Format d'enveloppe", required: true %>
                     <%= f.input :ar, label: "Accusee Reception" if @pack.title == "Recommandés"%>
+                    <%= f.input :pb, label: "Papier Bulle"%>
                     <%= f.button :submit,"Recevez vos prix",class: " btn-card "%>
                   <% end %>
                 </div>

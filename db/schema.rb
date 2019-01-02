@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2019_01_02_140910) do
     t.integer "price_cents", default: 0, null: false
     t.string "reduction"
     t.boolean "ar", default: false
+    t.boolean "pb", default: false
+    t.string "format"
     t.index ["pack_id"], name: "index_orders_on_pack_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
