@@ -52,6 +52,10 @@
                 <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Se deconnecter") %>
               <% end %>
             </li>
+
+            <li>
+             <%= link_to 'Mes commandes', dashboard_path %>
+            </li>
           <% else %>
             <li>      <%= link_to 'Inscription', new_user_registration_path, class: " btn btn-primary center-block navbar-wagon-item navbar-wagon-link" %></li>
             <li>      <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %></li>

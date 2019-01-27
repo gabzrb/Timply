@@ -81,4 +81,21 @@ and (-webkit-min-device-pixel-ratio: 2){
 }
 }
 
+            @media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .card_order {
+    width: 40vw;
+    height: 82vh;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
 
+.card-info {
+  width: 96%;
+}
+
+
+}
