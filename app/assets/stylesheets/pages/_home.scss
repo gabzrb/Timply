@@ -1,19 +1,22 @@
 // Specific CSS for your home-page
 
 .difference {
-  margin-top: 30px;
+  margin-top: 10%;
 }
 
 .margin-icon {
 
+   margin-top: 25%;
+}
+
+.margin-watch {
+
    margin-top: 10%;
 }
 
-
-
 .margin-lasticon {
 
-   margin-top: 5%;
+   margin-top: 15%;
 }
 
 
@@ -42,5 +45,12 @@ color: white;
 padding: 30px
 }
 
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px) {
+.svg-content {
+    width: 300px;
+    padding-left: 15px;
+  }
 
-
+}

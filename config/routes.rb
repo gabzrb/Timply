@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'contact/new'
   devise_for :users
   root to: 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
   get '/mentionslegales', to: 'pages#mentionslegales'
   get '/apropos', to: 'pages#apropos'
+  resources :contacts, only: [:new, :create]
   get :order_confirmation, to: 'orders#order_confirmation'
   resources :orders, only: [ :index, :destroy, :update, :edit ]
   resources :packs, only: [ :index, :show ] do

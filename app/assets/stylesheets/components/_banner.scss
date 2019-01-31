@@ -66,6 +66,7 @@ margin-bottom: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .card_confirm_order2 {
@@ -140,7 +141,7 @@ padding-top: 11px;
 // Page d'inscription
 .card_inscription {
       width: 33vw;
-    height: 86vh;
+    height: 95vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -150,7 +151,14 @@ padding-top: 11px;
     flex-direction: column;
     margin-bottom: 2%;
     margin-top: 3%;
+     font-size: 13px;
 }
+
+.card_inscription h2 {
+  font-size: 30px;
+}
+
+
 
 .blanco a {
   color: white;
@@ -166,7 +174,7 @@ padding-top: 11px;
 and (max-width: 675px)
 { .card_inscription {
       width: 83vw;
-    height: 100vh;
+    height: 132vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -195,7 +203,7 @@ and (max-width: 675px)
 and (max-width: 736px) {
   .card_inscription {
        width: 70vw;
-    height: 90vh;
+    height: 120vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -231,7 +239,7 @@ and (max-width: 1024px)
 
 .card_inscription {
     width: 59vw;
-    height: 75vh;
+    height: 88vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -241,17 +249,188 @@ and (max-width: 1024px)
     flex-direction: column;
     margin-bottom: 2%;
     margin-top: 3%;
+}
+}
+
+
+// Page de connexion
+.banner-connexion {
+ color: black;
+    background-size: cover !important;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card_connexion {
+      width: 22vw;
+    height: 47vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 13px;
+}
+
+
+.form-inputs {
+ margin-right: 16px;
+}
+
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+{
+.card_connexion {
+      width: 81vw;
+    height: 51vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 13px;
+}
+
+
+}
+
+
+@media only screen
+ and (min-device-width: 768px)
+and (max-width: 1024px) {
+.card_connexion {
+      width: 43vw;
+    height: 35vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 13px;
+}
+
+}
+
+
+
+// Page de mot de passe oublié
+.card_mdpf {
+      width: 33vw;
+    height: 36vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 13px;
+}
+
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+{
+.card_mdpf {
+    width: 82vw;
+    height: 36vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 13px;
+}
+}
+
+@media only screen
+ and (min-device-width: 768px)
+and (max-width: 1024px) {
+
+.card_mdpf {
+    width: 73vw;
+    height: 24vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 13px;
+}
+
+}
+
+// Page d'edit
+
+.card_edit {
+      width: 33vw;
+    height: 85vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 13px;
+}
+
+
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+{
+.card_edit {
+    width: 87vw;
+    height: 119vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 13px;
 }
 }
 
 
 @media only screen
- and (min-device-width: 1024px)
-and (max-width: 1366px) {
+ and (min-device-width: 768px)
+and (max-width: 1024px) {
 
-.card_inscription {
-    width: 52vw;
-    height: 52vh;
+  .card_edit {
+    width: 51vw;
+    height: 81vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -261,8 +440,7 @@ and (max-width: 1366px) {
     flex-direction: column;
     margin-bottom: 2%;
     margin-top: 3%;
+    font-size: 13px;
 }
-
 }
-
 

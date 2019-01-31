@@ -1,0 +1,43 @@
+<div class="banner-confirmation-order" style="background-image:
+ url(<%= image_path 'plein.png' %>);">
+<div class="card_inscription">
+     <h2 style="color: #518CE4 "><strong>Posez-nous vos questions</strong></h2>
+<%= simple_form_for @contact, url: {action: "create"} do |f| %>
+    <% if flash[:error].present? %>
+        <p> flash[:error]</p>
+    <% end %>
+    <div class="form-row">
+
+    <div class="col-xs-12 col-md-6">
+    <%= f.input :prenom, label: "Prénom", required: true %>
+    </div>
+
+     <div class="col-xs-12 col-md-6">
+    <%= f.input :name, label: "Nom", required:true %>
+      </div>
+
+
+          <div class="col-xs-12">
+          <%= f.input :entreprise, required: false %>
+           </div>
+
+   <div class="col-xs-12">
+           <%= f.input :email,
+                required: true,
+                autofocus: true ,
+                 placeholder: "jepaiemestimbres@gmail.com",
+                input_html: { autocomplete: "email" }%>
+      </div>
+
+       <div class="col-xs-12">
+       <%= f.input :message, as: :text, required: false %>
+       </div>
+         </div>
+
+
+         <div class="form-actions">
+          <%= f.submit 'Send Message', class: "btn-inscription" %>
+        </div>
+         <% end %>
+          </div>
+        </div>

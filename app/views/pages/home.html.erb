@@ -1,7 +1,8 @@
 <%= render 'shared/banner' %>
 <div class="container text-center">
-  <h2> Finis la perte de temps et d’argent !</h2>
+
   <div class="row">
+    <h2 style="color: #308edc"> Finis la perte de temps et d’argent !</h2>
     <div class="difference">
       <div data-aos="fade-right" data-aos-offset="0"
     data-aos-delay="0"
@@ -18,21 +19,23 @@
             affanchissons vos enveloppes qui en plus de leur  donnent un coté rétro qui rendront vos lettres uniques, , reduira vos couts d’envois.
             En savoir plus sur nos timbres </p>
         </div>
-        <div class="col col-xs-12 col-sm-6">
+
+        <div class="col col-xs-12 col-sm-6 svg-content">
           <%= image_tag"envelope.svg" %>
         </div>
       </div>
+
       <div data-aos="fade-left" data-aos-offset="200"
     data-aos-delay="0"
     data-aos-duration="2000"
     data-aos-easing="ease-in-out"
     data-aos-once="false"
     data-aos-anchor-placement="top-center">
-        <div class="col col-xs-12 col-sm-6">
+        <div class="col col-xs-12 col-sm-6 svg-content">
           <%= image_tag "time.svg"%>
         </div>
         <div class="col col-xs-12 col-sm-6">
-          <div class="margin-icon">
+          <div class="margin-watch">
             <%= image_tag"stopwatch.png" %>
             <h3>Finis les longues queues ! </h3>
             <p>  Gagnez du temps, finis les deplacements, les longues heures aux télephonnes pour souscrire à un contrat, les files d’attentes.
@@ -58,7 +61,7 @@
               En savoir plus sur nos tarifs </p>
           </div>
         </div>
-        <div class="col col-xs-12 col-sm-6">
+        <div class="col col-xs-12 col-sm-6 svg-content">
           <div class="margin-icon">
             <%= image_tag "savings.svg"%>
           </div>
@@ -70,7 +73,7 @@
     data-aos-easing="ease-in-out"
     data-aos-once="false"
     data-aos-anchor-placement="top-center">
-        <div class="col col-xs-12 col-sm-6">
+        <div class="col col-xs-12 col-sm-6 svg-content">
           <%= image_tag"mail_box.svg" %>
         </div>
         <div class="col col-xs-12 col-sm-6">
@@ -92,7 +95,7 @@
   <h2 class="text-center titre">  Ce que nos clients disent de nous !</h2>
   <%= render 'shared/carousel' %>
 </div>
-<%= render 'shared/gallery' %>
+
 <div class="wrapper text-center">
   <h2 style= "margin-bottom: 50px;"> Posez nous vos questions</h2>
   <%=     image_tag"smartphone.png" %>
