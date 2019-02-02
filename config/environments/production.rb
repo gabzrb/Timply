@@ -48,6 +48,7 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+  Rails.application.routes.default_url_options[:host] = 'timply.herokuapp.com'
   config.action_mailer.default_url_options = { host: 'https://timply.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
 
@@ -66,6 +67,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
 
 
   config.action_mailer.smtp_settings = {
@@ -76,6 +78,7 @@ Rails.application.configure do
     enable_starttls_auto: true,
     user_name: ENV['GMAIL_USERNAME'],
     password: ENV['GMAIL_PASSWORD']
+
   }
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
