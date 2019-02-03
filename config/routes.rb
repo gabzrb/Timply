@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
+  get '/tracking', to: 'pages#tracking'
+  post '/trackingresult', to: 'pages#trackingresult'
   get '/mentionslegales', to: 'pages#mentionslegales'
   get '/apropos', to: 'pages#apropos'
   resources :contacts, only: [:new, :create]
