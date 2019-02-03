@@ -20,6 +20,7 @@ gem 'money-rails'
 gem 'stripe'
 gem 'kaminari'
 gem "figaro"
+gem 'rest-client'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
