@@ -37,13 +37,13 @@ margin-bottom: 60px;
   font-size: 50px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  font-family: 'Lobster', cursive;
+  font-family: 'CircularStd-Black';
 }
 
 
 
 .banner h2 {
- font-family: 'Lobster', cursive;
+ font-family: 'CircularStd-Black';
  font-size: 32px;
 
 }
@@ -59,6 +59,388 @@ margin-bottom: 60px;
   justify-content: center;
 }
 
+.banner-confirmation-order{
+ color: black;
+    background-size: cover !important;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card_confirm_order2 {
+    width: 40vw;
+    height: 75vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card_recapitulatif2 {
+    width: 80%;
+    height: 58%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+        margin-top: 10px;
+}
+
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+{
+  .card_confirm_order2 {
+    width: 93vw;
+    height: 92vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.card_recapitulatif2 {
+    width: 79%;
+    height: 55%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    margin-top: 35px;
+}
+
+.line_confirmation {
+    border-bottom: 2px solid #518CE4;
+    width: 80%;
+    padding: 0%;
+    display: block;
+    justify-content: center;
+    margin-top: 3px;
+}
+
+}
 
 
+.redirection{
+padding-top: 11px;
+}
+
+
+
+
+// Page d'inscription
+.card_inscription {
+      width: 33vw;
+    height: 95vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 13px;
+}
+
+.card_inscription h2 {
+  font-size: 30px;
+}
+
+
+
+.blanco a {
+  color: white;
+}
+
+.blanco a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+{ .card_inscription {
+      width: 83vw;
+    height: 132vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 12px;
+}
+
+.card_inscription h2 {
+        font-size: 25px;
+  }
+
+  .form-row {
+    margin-left: 10px;
+  }
+
+}
+
+
+@media only screen
+ and (min-device-width: 414px)
+and (max-width: 736px) {
+  .card_inscription {
+       width: 70vw;
+    height: 120vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 12px;
+  }
+
+  .card_inscription h2 {
+        font-size: 25px;
+  }
+}
+
+
+
+@media only screen
+ and (min-device-width: 768px)
+and (max-width: 1024px)
+{
+  .banner-confirmation-order {
+    color: black;
+    background-size: cover !important;
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_inscription {
+    width: 59vw;
+    height: 88vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+}
+}
+
+
+// Page de connexion
+.banner-connexion {
+ color: black;
+    background-size: cover !important;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card_connexion {
+      width: 22vw;
+    height: 47vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 13px;
+}
+
+
+.form-inputs {
+ margin-right: 16px;
+}
+
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+{
+.card_connexion {
+      width: 81vw;
+    height: 51vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 13px;
+}
+
+
+}
+
+
+@media only screen
+ and (min-device-width: 768px)
+and (max-width: 1024px) {
+.card_connexion {
+      width: 43vw;
+    height: 35vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 13px;
+}
+
+}
+
+
+
+// Page de mot de passe oublié
+.card_mdpf {
+      width: 33vw;
+    height: 36vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 13px;
+}
+
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+{
+.card_mdpf {
+    width: 82vw;
+    height: 36vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 13px;
+}
+}
+
+@media only screen
+ and (min-device-width: 768px)
+and (max-width: 1024px) {
+
+.card_mdpf {
+    width: 73vw;
+    height: 24vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 13px;
+}
+
+}
+
+// Page d'edit
+
+.card_edit {
+      width: 33vw;
+    height: 85vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+     font-size: 13px;
+}
+
+
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+{
+.card_edit {
+    width: 87vw;
+    height: 119vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 13px;
+}
+}
+
+
+@media only screen
+ and (min-device-width: 768px)
+and (max-width: 1024px) {
+
+  .card_edit {
+    width: 51vw;
+    height: 81vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 13px;
+}
+}
 

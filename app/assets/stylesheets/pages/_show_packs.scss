@@ -52,7 +52,7 @@ display: block;
 
 .card_form {
 width: 24vw;
-height: 54vh;
+height: 75vh;
 margin-top: 4%;
 background-color: white;
 border-radius: 10px;
@@ -65,8 +65,8 @@ and (max-width: 675px)
 and (-webkit-min-device-pixel-ratio: 2){
 
 .card_form {
-width: 79vw;
-height: 62vh;
+width: 79vw ;
+height: 82vh !important;
 margin-top: 4%;
 background-color: white;
 border-radius: 10px;
@@ -142,3 +142,34 @@ margin-left: 11%;
       font-family: 'Lobster', cursive;
       color: white;
 }
+
+
+
+@media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+
+.card_form {
+width: 38vw;
+height: 54vh;
+margin-top: 4%;
+background-color: white;
+border-radius: 10px;
+    display: block;
+}
+
+.form-group {
+margin-left: 1% !important;
+}
+
+.b img {
+  width: 37vw;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+        height: 22vh;
+}
+
+  }
+
+
+

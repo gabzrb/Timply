@@ -1,7 +1,8 @@
 <%= render 'shared/banner' %>
 <div class="container text-center">
-  <h2> Finis la perte de temps et d’argent !</h2>
+
   <div class="row">
+    <h2 style="color: #308edc"> Finis la perte de temps et d’argent !</h2>
     <div class="difference">
       <div data-aos="fade-right" data-aos-offset="0"
     data-aos-delay="0"
@@ -11,32 +12,29 @@
     data-aos-anchor-placement="top-center">
         <div class="col col-xs-12 col-sm-6  ">
           <%= image_tag"stamp.png" %>
-          <h3>Differenciez-vous !    </h3>
-          <p>  Nos timbres de collection,
-            nous permettent de vous
-            offrir le meilleur tarif. Nous
-            affanchissons vos enveloppes qui en plus de leur  donnent un coté rétro qui rendront vos lettres uniques, , reduira vos couts d’envois.
-            En savoir plus sur nos timbres </p>
+          <h3>Differenciez-vous ! </h3>
+          <p>  Vos frais d'envoi Postaux s'envolent chaque année? Nos timbres de collection nous permettre de vous offrir les meilleurs tarifs et rendent vos courriers uniques. Timply c'est des milliers d'enveloppes et colis envoyés  et des milliers d'euros économisé chaque année. En savoir plus sur nous</p>
         </div>
-        <div class="col col-xs-12 col-sm-6">
+
+        <div class="col col-xs-12 col-sm-6 svg-content">
           <%= image_tag"envelope.svg" %>
         </div>
       </div>
+
       <div data-aos="fade-left" data-aos-offset="200"
     data-aos-delay="0"
     data-aos-duration="2000"
     data-aos-easing="ease-in-out"
     data-aos-once="false"
     data-aos-anchor-placement="top-center">
-        <div class="col col-xs-12 col-sm-6">
+        <div class="col col-xs-12 col-sm-6 svg-content">
           <%= image_tag "time.svg"%>
         </div>
         <div class="col col-xs-12 col-sm-6">
-          <div class="margin-icon">
+          <div class="margin-watch">
             <%= image_tag"stopwatch.png" %>
-            <h3>Finis les longues queues ! </h3>
-            <p>  Gagnez du temps, finis les deplacements, les longues heures aux télephonnes pour souscrire à un contrat, les files d’attentes.
-              Restez concentrez sur votre activité, nous nous occupons du reste ! </p>
+            <h3>Finis les files d'attentes ! </h3>
+            <p>  Gagnez du temps, finis les deplacements, les machines à affranchir et les files d’attentes. Tout votre courrier disponible en un clique. Restez concentrez sur votre activité, nous nous occupons du reste ! </p>
           </div>
         </div>
       </div>
@@ -50,15 +48,15 @@
           <div class="margin-icon">
             <%= image_tag"coins.png" %>
             <h3>   Réduisez vos couts ! </h3>
-            <p>  Finis les machines à  affranchir, les
-              loyers, les tarifs exorbitants, les
-              cautions. Choisissez le type d’envoi,le
+            <p>  Plus de Machines à Affranchir, de
+              Loyers, de Consommables et de
+              Cautions. Choisissez le type d’envoi,le
               poids et béneficiez d’un tarif
-              avantageux et sans  engagement
-              En savoir plus sur nos tarifs </p>
+              avantageux et sans  engagement.
+              Inscrivez-vous pour en savoir plus sur nos tarifs </p>
           </div>
         </div>
-        <div class="col col-xs-12 col-sm-6">
+        <div class="col col-xs-12 col-sm-6 svg-content">
           <div class="margin-icon">
             <%= image_tag "savings.svg"%>
           </div>
@@ -70,18 +68,20 @@
     data-aos-easing="ease-in-out"
     data-aos-once="false"
     data-aos-anchor-placement="top-center">
-        <div class="col col-xs-12 col-sm-6">
+        <div class="col col-xs-12 col-sm-6 svg-content">
           <%= image_tag"mail_box.svg" %>
         </div>
         <div class="col col-xs-12 col-sm-6">
           <div class="margin-lasticon">
             <%= image_tag"envelope.png" %>
             <h3>    Rapide,suivi et personalisé ! </h3>
-            <p>    Recevez vos packs d’enveloppes aussi vite
-              que  vous les avez commandé.
-              De plus, vous pouvez personaliser votre commande si vous avez vos propres
+
+            <p>  Recevez vos packs d’enveloppes envoyés en colissimo recommandé (frais de port offerts) aussi vite
+              que  vous les avez commandé. Choisissez le type d'affranchissement et le format d'enveloppe.
+                 De plus, vous pouvez Personaliser votre commande si vous avez vos propres
               logos,enveloppes ou tout autre demande.
-              En savoir plus sur les délais </p>
+
+              Contactez-nous si vous avez la moindre question </p>
           </div>
         </div>
       </div>
@@ -92,7 +92,7 @@
   <h2 class="text-center titre">  Ce que nos clients disent de nous !</h2>
   <%= render 'shared/carousel' %>
 </div>
-<%= render 'shared/gallery' %>
+
 <div class="wrapper text-center">
   <h2 style= "margin-bottom: 50px;"> Posez nous vos questions</h2>
   <%=     image_tag"smartphone.png" %>

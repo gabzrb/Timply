@@ -1,27 +1,83 @@
-<h2>S'inscrire</h2>
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="banner-confirmation-order" style="background-image:
+ url(<%= image_path 'plein.png' %>);">
+
+
+    <div class="card_inscription">
+       <h2 style="color: #518CE4 "><strong>Inscription</strong></h2>
+   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
-  <div class="form-inputs">
-    <%= f.input :email,
+  <div class="form-row">
+
+    <div class="col-xs-12 col-md-6">
+    <%= f.input :prenom, label: "Prénom"%>
+      </div>
+
+    <div class="col-xs-12 col-md-6">
+    <%= f.input :name, label: "Nom"%>
+      </div>
+
+       <div class="col-xs-12">
+           <%= f.input :email,
                 required: true,
                 autofocus: true ,
+                 placeholder: "jepaiemestimbres@gmail.com",
                 input_html: { autocomplete: "email" }%>
-    <%= f.input :name %>
-    <%= f.input :password,
+      </div>
+
+
+        <div class="col-xs-12">
+            <%= f.input :password,
                 required: true,
                 label: "Mot de passe",
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                placeholder: "6 caractères minimum",
+
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                label: "Confirmation du mot de passe",
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :entreprise %>
-    <%= f.input :address, label: "Adresse" %>
-    <%= f.input :siret %>
+        </div>
+
+        <div class="col-xs-12">
+          <%= f.input :password_confirmation,
+                      label: "Confirmation du mot de passe",
+                      required: true,
+                      input_html: { autocomplete: "new-password" } %>
+        </div>
+
+          <div class="col-xs-12">
+          <%= f.input :entreprise %>
+           </div>
+           <div class="col-xs-12">
+             <%= f.input :address, label: "Adresse" %>
+           </div>
+
+            <div class="col-xs-12 col-md-6">
+             <%= f.input :codepostal, label: "Code Postal" %>
+           </div>
+
+           <div class="col-xs-12 col-md-6">
+             <%= f.input :ville, label: "Ville" %>
+           </div>
+
+
+          <div class="col-xs-12">
+          <%= f.input :siret %>
+          </div>
+        </div>
+        <div class="form-actions">
+      <%= f.button :submit, "S'inscrire", class: "btn-inscription"%>
+    </div>
   </div>
-  <div class="form-actions">
-    <%= f.button :submit, "S'inscrire" %>
-  </div>
+
+
 <% end %>
-<%= render "devise/shared/links" %>
+<div class="blanco">
+<strong> <%= render "devise/shared/links" %> </strong>
+</div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+
+
+

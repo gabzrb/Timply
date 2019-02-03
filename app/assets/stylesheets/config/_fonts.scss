@@ -4,11 +4,13 @@
 
 // Define fonts for body and headers
 $body-font: "Montserrat", "sans-serif";
-$headers-font: "Montserrat",  "sans-serif";
+$headers-font: "CircularStd-Black";
 
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
+@font-face { font-family: CircularStd-Black; src: url('CircularStd-Black.ttf'); }
+ @font-face { font-family: SFProText-Bold; src: url('SFProText-Bold.otf'); }
+ @font-face { font-family: SFProText-Light; src: url('SFProText-Light.otf'); }
+ @font-face { font-family: SFProText-Regular; src: url('SFProText-Regular.otf'); }
 //   src: font-url('FontFile.eot');
 //   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
 //        font-url('FontFile.woff') format('woff'),
