@@ -48,9 +48,25 @@ padding: 30px
 @media only screen
  and (min-device-width: 375px)
 and (max-width: 675px) {
-.svg-content {
+.svg-content svg{
     width: 300px;
     padding-left: 15px;
   }
 
+}
+
+@media only screen
+ and (min-device-width: 768px)
+and (max-width: 1024px) {
+
+.svg-content svg{
+    width: 300px;
+    padding-left: 15px;
+  }
+
+}
+
+.iconcontact {
+  margin-top: 35px;
+  margin-left: 10px;
 }

@@ -2,9 +2,9 @@
   background: #061E3E;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 40vh;
-  padding: 0px 50px;
+  justify-content: space-around;
+  padding-bottom: 20px;
+    padding-top: 33px;
   color: white;
  width: 100vw;
  bottom: 0;
@@ -65,3 +65,45 @@ align-items: center;
   color: #D23333;
 }
 
+
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+{ .footer {
+    background: #061E3E;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+    /* height: 40vh; */
+    padding: 15px 17px;
+    color: white;
+  }
+
+  .footer-service {
+
+   display: block;
+   align-items: center;
+   margin-right: 27%;
+}
+
+.a-propos {
+    display: block;
+    align-items: center;
+    margin-right: 18%;
+}
+
+
+.foot-image {
+ display: flex;
+    flex-direction: column;
+    margin-left: 36%;
+}
+
+.footer-links {
+    display: flex;
+
+    margin-left: 9%;
+}
+
+  }

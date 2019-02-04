@@ -17,17 +17,17 @@
               <h1> <%= @show_prices[0] %>€ </h1>
               <h3> <%= @show_prices[1] %>€</h3>
             </div>
-            <div class="form-group">
+            <div class="form-group decal">
               <%= simple_form_for([@pack, @order])do |f| %>
                 <div class="form-row">
                   <div class="col-xs-12 col-md-9">
                     <%= f.input :category, collection: @pack.category, label: "Type d'envoi", required: true %>
                     <%= f.input :quantity, label: "Quantité", required: true %>
                     <%= f.input :weight, collection: ["20g", "100g", "250g", "500g", "3kg"],label: "Poids", required: true %>
-                    <%= f.input :format, collection: ["1","2"],label: "Format d'enveloppe", required: true %>
-                    <%= f.input :ar, label: "Accusee Reception" if @pack.title == "Recommandés"%>
+                    <%= f.input :format, collection: ["DL(stantard)","C4","C5","C6"],label: "Format d'enveloppe", required: true %>
+                    <%= f.input :ar, label: "AR" if @pack.title == "Recommandés"%>
                     <%= f.input :pb, label: "Papier Bulle"%>
-                    <%= f.button :submit,"Recevez vos prix",class: " btn-card "%>
+                    <%= f.button :submit,"Recevez vos prix",class: " btn-form "%>
                   <% end %>
                 </div>
               </div>

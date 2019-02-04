@@ -45,7 +45,7 @@ height: 39%;
   .cover {
       color: white;
   text-align: center;
-   height: auto !important;
+
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -100,7 +100,7 @@ and (-webkit-min-device-pixel-ratio: 2){
 .cover{
       color: white;
   text-align: center;
-   height: auto !important;
+
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -122,11 +122,11 @@ and (-webkit-min-device-pixel-ratio: 2){
 
 
 .row {
-      margin-left: 100px !important;
+
     margin-right: 11px;
 }
   .card-image {
-    height: 41% !important;
+    height: 47% !important;
   }
 }
 

@@ -8,13 +8,14 @@
     <div class="dashboard_card">
       <%= image_tag(order.pack.photo) %>
       <p><%= order.pack_sku %></p>
+      <p> <%= order.created_at.strftime("%d-%m-%Y") %>    </p>
       <p> <%= order.quantity %> Enveloppes </p>
       <p> <%= order.weight %> </p>
       <p><%= order.state %></p>
       <p><%= humanized_money_with_symbol(order.price) %></p>
-      <div class="btn btn-cta ">
-        <%= link_to "Payer", new_pack_order_payment_path(order.pack_id, order) if order.state == 'pending' %>
-      </div>
+
+        <%= link_to "Payer", new_pack_order_payment_path(order.pack_id, order),class: "btn btn-cta" if order.state == 'pending' %>
+
       <%= link_to "Supprimer", order_path(order), :method => :delete, data: {:confirm => "Etes-vous sure?" } if order.state == 'pending' %>
     </div>
     <hr>
