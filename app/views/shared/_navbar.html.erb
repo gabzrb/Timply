@@ -7,8 +7,8 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-
-         <%= link_to 'Contacte', new_contact_path, class: " navbar-wagon-item navbar-wagon-link" %>
+         <%= link_to 'Notre mission', apropos_path, class: " navbar-wagon-item navbar-wagon-link" %>
+         <%= link_to 'Contactez-nous', new_contact_path, class: " navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Administrateur", orders_path, class: "navbar-wagon-item navbar-wagon-link" if current_user.admin %>
       <%= link_to 'Commander', packs_path, class: " btn btn-cta-nav center-block navbar-wagon-item navbar-wagon-link" %>
       <%= link_to 'Mes commandes', dashboard_path, class: " btn btn-primary center-block navbar-wagon-item navbar-wagon-link" %>
@@ -43,6 +43,21 @@
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <% if user_signed_in? %>
+         <li>
+            <%= link_to 'Notre mission', apropos_path %>
+            </li>
+
+             <li>
+            <%= link_to 'Commander', packs_path %>
+            </li>
+
+            <li>
+             <%= link_to 'Mes commandes', dashboard_path %>
+            </li>
+             <li>
+            <%= link_to 'Contactez-nous', new_contact_path %>
+            </li>
+
           <li>
             <%= link_to edit_user_registration_path do %>
               <i class="fa fa-cog"></i>  <%= t(".settings", default: "Profile") %>
@@ -55,9 +70,8 @@
               <% end %>
             </li>
 
-            <li>
-             <%= link_to 'Mes commandes', dashboard_path %>
-            </li>
+
+
           <% else %>
             <li>      <%= link_to 'Inscription', new_user_registration_path, class: " btn btn-primary center-block navbar-wagon-item navbar-wagon-link" %></li>
             <li>      <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %></li>

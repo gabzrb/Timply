@@ -66,6 +66,7 @@ margin-bottom: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 
 }
 
@@ -139,9 +140,20 @@ padding-top: 11px;
 
 
 // Page d'inscription
+
+.banner-inscription {
+
+  color: black;
+  position: relative;
+    background-size: cover !important;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .card_inscription {
       width: 33vw;
-    height: 95vh;
+    height: 98vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -158,7 +170,11 @@ padding-top: 11px;
   font-size: 30px;
 }
 
-
+.blanco {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
 
 .blanco a {
   color: white;
@@ -239,7 +255,7 @@ and (max-width: 1024px)
 
 .card_inscription {
     width: 59vw;
-    height: 88vh;
+    height: 55vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -279,8 +295,8 @@ and (max-width: 1024px)
 }
 
 
-.form-inputs {
- margin-right: 16px;
+.inputinscri {
+  margin-left: 14px;
 }
 
 @media only screen
@@ -444,3 +460,98 @@ and (max-width: 1024px) {
 }
 }
 
+
+.banner-apropos{
+ color: black;
+    background-size: cover !important;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+
+
+
+}
+
+.color-overlay {
+   background-color: #000000;
+
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.5;
+
+}
+
+.writing-content {
+  z-index: 1;
+  color: white;
+  margin-top: 6%;
+  font-weight: bold;
+}
+.writing-content h1 {
+ font-family: "CircularStd-Black";
+
+ font-size: 40px;
+
+}
+
+.writing-content p {
+
+     font-size: 20px;
+    padding: 4px 71px;
+    max-width: 52%;
+    margin-left: 24%;
+}
+
+.writing-content a {
+
+    color: white;
+
+}
+
+
+@media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px)
+{
+  .banner-apropos{
+ color: black;
+    background-size: cover !important;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+
+
+}
+
+.writing-content p {
+    font-size: 20px;
+    padding: 4px 71px;
+    max-width: 100%;
+    margin-left: 5%;
+}
+}
+
+
+@media only screen
+ and (min-device-width: 768px)
+and (max-width: 1024px) {
+
+.banner-apropos {
+ color: black;
+ background-size: cover !important;
+ flex-direction: column;
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ position: absolute;
+
+
+}
+
+}

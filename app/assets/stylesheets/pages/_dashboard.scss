@@ -25,7 +25,7 @@
 .dashboard_card {
     display: flex;
     flex-direction: row;
-
+    margin-right: 30px;
     justify-content: space-between;
     align-items: center;
       flex-grow: 1;
@@ -47,3 +47,59 @@
 
     border-top: 1px solid #eeeeee;
     }
+
+
+    @media only screen
+ and (min-device-width: 375px)
+and (max-width: 675px){
+
+.dashboard_card {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+      flex-grow: 1;
+      padding: 22px;
+
+}
+
+.dashboard_card img {
+    border-radius: 10px;
+    height: 27vh;
+    width: 71vw;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+}
+
+@media only screen
+ and (min-device-width: 768px)
+and (max-width: 1024px) {
+
+
+.dashboard_card {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+      flex-grow: 1;
+      padding: 22px;
+
+}
+
+.dashboard_card img {
+    border-radius: 10px;
+    height: 27vh;
+    width: 53vw;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.dashboard_card p {
+  font-size: 35px;
+}
+
+  }
