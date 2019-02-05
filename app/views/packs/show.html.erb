@@ -23,7 +23,7 @@
                   <div class="col-xs-12 col-md-9">
                     <%= f.input :category, collection: @pack.category, label: "Type d'envoi", required: true %>
                     <%= f.input :quantity, label: "Quantité", required: true %>
-                    <%= f.input :weight, collection: ["20g", "100g", "250g", "500g", "3kg"],label: "Poids", required: true %>
+                    <%= f.input :weight, collection: ["20g","50g","100g", "250g", "500g", "1kg","2kg","3kg"],label: "Poids", required: true %>
                     <%= f.input :format, collection: ["DL(stantard)","C4","C5","C6"],label: "Format d'enveloppe", required: true %>
                     <%= f.input :ar, label: "AR" if @pack.title == "Recommandés"%>
                     <%= f.input :pb, label: "Papier Bulle"%>

@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="card_confirm_order">
-            <h3> Récapitulatif de la commande: </h3>
+            <h3 style="color: #518CE4"> Récapitulatif de la commande </h3>
             <div class="card_recapitulatif">
               <div class="line_confirmation">
                 <p> <%=@order.user.name %></p>
@@ -47,14 +47,14 @@
               <%= image_tag   "secure.png", height: 120 %>
               <p>Paiement 100% sécurisé</p>
               <%= image_tag   "suivi.png", height: 120 %>
-              <p> Envoi en lettre recommandée avec un numéro de suivi. </p>
+              <p>  Un email contenant votre numéro de suivi vous sera envoyé suite à la commande. </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="margin_contact2">
-      <p><strong>Pour toute autre question, n'hesitez pas à nous contacter</strong> </p>
+   <div class="margin_contact">
+      <p><strong><%= link_to "Pour toute autre question, n'hesitez pas à nous contacter", new_contact_path %></strong> </p>
     </div>
   </div>
 </div>

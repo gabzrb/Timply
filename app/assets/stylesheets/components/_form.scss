@@ -1,6 +1,18 @@
 
-.form-row {
-  margin-right: 20px;
+
+.card_password {
+    width: 32vw;
+    height: 49vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 13px;
 }
 
 .form-control {

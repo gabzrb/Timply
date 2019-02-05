@@ -72,7 +72,7 @@ margin-bottom: 60px;
 
 .card_confirm_order2 {
     width: 40vw;
-    height: 75vh;
+    height: 88vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -80,6 +80,10 @@ margin-bottom: 60px;
     justify-content: baseline;
     align-items: center;
     flex-direction: column;
+}
+
+#longueur{
+  max-width: 76%;
 }
 
 .card_recapitulatif2 {
@@ -99,7 +103,7 @@ and (max-width: 675px)
 {
   .card_confirm_order2 {
     width: 93vw;
-    height: 92vh;
+    height: 95vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -108,6 +112,10 @@ and (max-width: 675px)
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
+}
+
+.card_confirm_order2 p {
+  font-size: 15px;
 }
 .card_recapitulatif2 {
     width: 79%;
@@ -509,6 +517,7 @@ and (max-width: 1024px) {
 .writing-content a {
 
     color: white;
+    text-decoration: underline;
 
 }
 

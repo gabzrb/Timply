@@ -4,7 +4,7 @@ Order.destroy_all
 puts "Je suis le Dieu du Timbre"
 
 TITLES = ["Lettre Verte", "Lettre Prioritaire", "Lettre Suivie", "Recommandés"]
-POIDS = ["20g", "100g", "250g", "500g", "3kg"]
+POIDS = ["20g", "50g", "100g", "250g", "500g", "3kg"]
 INFO_Vert = "La lettre verte est la plus économique et met entre 2 et 3 jours à arriver au destinataire. Le délai suite à votre commande varie en fonction de votre demande et est de maximum une semaine.
  Pour toute demande particulière (collecte de vos enveloppes ...), Contactez-nous."
 INFO_Prio = "La lettre prioritaire vous permet d'envoyer un courrier urgent en moins de 24h. Le délai suite à votre commande varie en fonction de votre demande et est de maximum une semaine.
@@ -26,7 +26,7 @@ DELIVERED_R =  "Délivré en 2 jours"
 VERT = ["Pack Vert"]
 PRIO = ["Pack Prioritaire", "Pack Prioritaire Internationale"]
 SUIVIE = ["Pack Suivie", "Pack Suivie Internationale"]
-RECO = ["Pack R1", "Pack R2", "Pack R3", "Pack R1 Internationale", "Pack R2 Internationale"]
+RECO = ["Recommandée R1", "Recommandée R2", "Recommandée R3", "Recommandée R1 Internationale", "Recommandée R2 Internationale"]
 
 packvert = Pack.create!(title: TITLES[0], category:VERT, photo:"https://i.ibb.co/Z2Jjz9Y/Screen-Shot-2018-12-18-at-20-22-59.png", infos: INFO_Vert, description:DESCRIPTION_V, delivered:
                         DELIVERED_V )

@@ -8,22 +8,22 @@
   <div class="footer-service">
     <ul>
       <h6><strong>NOTRE SERVICE </strong></h6>
-      <li>Nos packs </li>
+      <li><%= link_to 'Nos packs',packs_path %> </li>
       <li>Nos tarifs</li>
     </ul>
   </div>
   <div class="a-propos">
     <ul>
       <h6><strong> A PROPOS </strong></h6>
-      <li>Notre mission</li>
-      <li>Mentions légales </li>
+      <li>     <%= link_to 'Notre mission', apropos_path %></li>
+      <li><%= link_to 'Mentions légales', mentionslegales_path %> </li>
     </ul>
   </div>
   <div class="liens-utiles">
     <ul>
       <h6><strong>LIENS UTILES </strong></h6>
-      <li>Timbres de collection</li>
-      <li>Accéder à mon compte</li>
+      <li><a href="http://www.estrepublicain.fr/insolite/2012/01/10/en-franc-mais-toujours-valables" target="_blank">Timbre de collection</a></li>
+      <li><%= link_to 'Accéder à mes comptes', dashboard_path %></li>
     </ul>
   </div>
   <div class="footer-links">

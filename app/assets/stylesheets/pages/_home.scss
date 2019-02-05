@@ -1,5 +1,8 @@
 // Specific CSS for your home-page
 
+
+
+
 .difference {
   margin-top: 10%;
 }
@@ -28,6 +31,18 @@ flex-direction: row;
 
 }
 
+
+
+.wrapper h3 {
+  font-size: 29px;
+    color: #08264D;
+    font-weight: 200;
+}
+
+
+.nounderline:hover {
+  text-decoration: none;
+}
 
 #email {
       margin-right: 15px;
@@ -69,4 +84,10 @@ and (max-width: 1024px) {
 .iconcontact {
   margin-top: 35px;
   margin-left: 10px;
+}
+
+
+.iconcontact p {
+  font-size: 15px;
+  color: #09264D;
 }
