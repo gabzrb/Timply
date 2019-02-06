@@ -1,7 +1,6 @@
 Rails.application.configure do
   config.action_mailer.default_url_options = { host: "https://timply.herokuapp.com" }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
   # Verifies that versions and hashed value of the package contents in the project's package.json
@@ -60,7 +59,7 @@ Rails.application.configure do
     :domain => 'heroku.com',
     :address => 'smtp.sendgrid.net',
     :port => 587,
-    :authentication => :plain,
+    :authentication => :login,
     :enable_starttls_auto => true
   }
 
