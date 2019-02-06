@@ -64,7 +64,7 @@ Rails.application.configure do
     :address => 'smtp.sendgrid.net',
     :port => 587,
     :authentication => :login,
-    :enable_starttls_auto => true
+    :enable_starttls_auto => true,
     api_key: ENV['SENDGRID_API_KEY']
   }
 
