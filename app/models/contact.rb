@@ -13,9 +13,7 @@ class Contact < MailForm::Base
       :subject => "Contact Form",
       :to => "gabrielzerbib6@gmail.com",
       :from => %("#{prenom}" "#{name}" <#{email}>),
-      delivery_method_options: {
-        api_key: 'SENDGRID_API_KEY'
-      }
+
     }
   end
 end
