@@ -25,7 +25,7 @@ DELIVERED_R =  "Délivré en 2 jours"
 
 VERT = ["Pack Vert"]
 PRIO = ["Pack Prioritaire", "Pack Prioritaire Internationale"]
-SUIVIE = ["Pack Suivie", "Pack Suivie Internationale"]
+SUIVIE = ["Pack Suivie"]
 RECO = ["Recommandée R1", "Recommandée R2", "Recommandée R3", "Recommandée R1 Internationale", "Recommandée R2 Internationale"]
 
 packvert = Pack.create!(title: TITLES[0], category:VERT, photo:"https://i.ibb.co/Z2Jjz9Y/Screen-Shot-2018-12-18-at-20-22-59.png", infos: INFO_Vert, description:DESCRIPTION_V, delivered:
