@@ -4,7 +4,7 @@ Order.destroy_all
 puts "Je suis le Dieu du Timbre"
 
 TITLES = ["Lettre Verte", "Lettre Prioritaire", "Lettre Suivie", "Recommandés"]
-POIDS = ["20g", "50g", "100g", "250g", "500g", "3kg"]
+POIDS = ["20g", "50g", "100g", "250g", "500g", "1kg", "2kg", "3kg"]
 INFO_Vert = "La lettre verte est la plus économique et met entre 2 et 3 jours à arriver au destinataire. Le délai suite à votre commande varie en fonction de votre demande et est de maximum une semaine.
  Pour toute demande particulière (collecte de vos enveloppes ...), Contactez-nous."
 INFO_Prio = "La lettre prioritaire vous permet d'envoyer un courrier urgent en moins de 24h. Le délai suite à votre commande varie en fonction de votre demande et est de maximum une semaine.
