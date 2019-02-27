@@ -201,7 +201,11 @@ padding-top: 11px;
 }
 
 
+@media only screen  and (min-device-width: 360px) and (max-device-width: 640px) {
 
+
+
+}
 
 
 
@@ -325,6 +329,19 @@ and (max-width: 1024px)
 }
 
 
+.card_confirm_order2 {
+    width: 92vw;
+    height: 169vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+
 .writing-content p {
     font-size: 20px;
     padding: 4px 71px;
@@ -333,11 +350,11 @@ and (max-width: 1024px)
 }
 
 .banner-confirmation-order {
-   color: black;
+       color: black;
     background-size: cover !important;
     flex-direction: column;
     display: flex;
-    height: 132vh;
+    height: 183vh;
     justify-content: center;
     align-items: center;
  }
