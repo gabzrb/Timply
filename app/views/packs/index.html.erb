@@ -1,13 +1,14 @@
 <div class="cover" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);
  url(<%= image_path 'banner2.png' %>);">
   <div class="container">
+    <div class="writing">
     <div class="row">
-      <div class="writing">
+
         <h1 class="text-center ">Nos packs d'enveloppes pré-timbrées</h1>
       </div>
       <div class="margin">
         <% @packs.each do |pack|  %>
-          <div class="col col-xs-12 col-sm-6 col-md-3">
+          <div class="col col-xs-12  col-sm-6 col-md-3 ">
             <div class="card">
               <% if pack.photo.nil? %>
                 <div class="card-image" style="background-image:
@@ -31,7 +32,7 @@ url(<%= pack.photo  %>);">
                 </div>
               </div>
               <div class="  text-center">
-                <%= link_to "Details",pack_path(pack), class: " btn-card nounderline" %>
+                <%= link_to "Commander",pack_path(pack), class: " btn-card nounderline" %>
               </div>
             </div>
           </div>
@@ -40,3 +41,4 @@ url(<%= pack.photo  %>);">
     </div>
   </div>
 </div>
+<%=render'shared/footer'%>

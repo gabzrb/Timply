@@ -46,13 +46,84 @@ border-bottom: 2px solid #518CE4;
     justify-content: center;
 }
 
+
+.btn-cta_dashboard {
+    border: 1px solid #308edc;
+    border-radius: 7px;
+    color: white;
+    background-color: #308edc;
+    padding: 5px 20px;
+}
+
+@media only screen  and (min-device-width: 360px) and (max-device-width: 640px) {
+
+.card_confirm_order {
+    width: 92vw !important;
+     margin-left: 0%;
+    height: 90vh !important;
+    background-color: white;
+    margin-top: 9%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.btn-cta {
+    border: 1px solid #308edc;
+    border-radius: 7px;
+    color: white;
+    background-color: #308edc;
+    padding: 8px 7px;
+}
+
+.btn-cta_dashboard {
+    border: 1px solid #308edc;
+    border-radius: 7px;
+    color: white;
+    background-color: #308edc;
+    padding: 3px 17px;
+}
+
+.card_order {
+    width: 90vw;
+    height: 86vh;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 1%;
+}
+
+.card_info {
+    width: 99% !important;
+    height: 55%;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: #2E5FDE;
+    margin-top: 10%;
+    margin-left: 1% !important;
+}
+}
+
+
+
 @media only screen
  and (min-device-width: 375px)
 and (max-width: 675px)
 and (-webkit-min-device-pixel-ratio: 2){
 
-  .card_order {
-    width: 81vw;
+ .card_order {
+    width: 90vw;
     height: 82vh;
     background-color: white;
     border-radius: 5px;
@@ -60,11 +131,12 @@ and (-webkit-min-device-pixel-ratio: 2){
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-}
+    margin-left: 1%;
+   }
 
-     .card_info {
-     width: 96% !important;
-      background-color: white;
+.card_info {
+    width: 98% !important;
+    background-color: white;
     border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
@@ -72,14 +144,23 @@ and (-webkit-min-device-pixel-ratio: 2){
     flex-direction: column;
     color: #2E5FDE;
     margin-top: 6%;
-    margin-left: 0% !important;
+    margin-left: 1% !important;
+}
   }
 
   .color {
     color: white;
-    margin-right: 7%;
+    margin-right: 7%; }
+
+    .btn-cta_dashboard {
+    border: 1px solid #308edc;
+    border-radius: 7px;
+    color: white;
+    background-color: #308edc;
+    padding: 3px 17px;
 }
-}
+
+
 
             @media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) {
   .card_order {

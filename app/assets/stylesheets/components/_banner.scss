@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
 }
 
@@ -166,8 +167,8 @@ padding-top: 11px;
     align-items: center;
 }
 .card_inscription {
-      width: 33vw;
-    height: 98vh;
+    width: 33vw;
+    height: 102vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -177,7 +178,7 @@ padding-top: 11px;
     flex-direction: column;
     margin-bottom: 2%;
     margin-top: 3%;
-     font-size: 13px;
+    font-size: 13px;
 }
 
 .card_inscription h2 {
@@ -198,6 +199,11 @@ padding-top: 11px;
   color: black;
   font-weight: bold;
 }
+
+
+
+
+
 
 @media only screen
  and (min-device-width: 375px)
@@ -228,12 +234,10 @@ and (max-width: 675px)
 }
 
 
-@media only screen
- and (min-device-width: 414px)
-and (max-width: 736px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width: 736px) and (min-device-width: 414px) {
   .card_inscription {
-       width: 70vw;
-    height: 120vh;
+    width: 70vw !important;
+    height: 128vh !important ;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -295,7 +299,7 @@ and (max-width: 1024px)
 }
 .card_connexion {
       width: 22vw;
-    height: 47vh;
+    height: 51vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -311,7 +315,66 @@ and (max-width: 1024px)
 
 .inputinscri {
   margin-left: 14px;
+ }
+
+
+ @media only screen   and (max-device-width: 640px) {
+  .card_connexion {
+         width: 80vw;
+    height: 60vh;
 }
+
+
+.writing-content p {
+    font-size: 20px;
+    padding: 4px 71px;
+    max-width: 100% !important;
+    margin-left: 0%!important;
+}
+
+.banner-confirmation-order {
+   color: black;
+    background-size: cover !important;
+    flex-direction: column;
+    display: flex;
+    height: 132vh;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+ .card_edit {
+    width: 86vw!important;
+    height: 156vh!important;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 0%;
+    margin-top: 6%;
+    font-size: 11px;
+}
+
+
+.card_inscription {
+    width: 82vw ;
+    height: 140vh ;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 13px;
+}
+
+ }
 
 @media only screen
  and (min-device-width: 375px)
@@ -319,7 +382,7 @@ and (max-width: 675px)
 {
 .card_connexion {
       width: 81vw;
-    height: 51vh;
+    height: 59vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -419,7 +482,7 @@ and (max-width: 1024px) {
 
 .card_edit {
       width: 33vw;
-    height: 85vh;
+        height: 130vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -431,6 +494,8 @@ and (max-width: 1024px) {
     margin-top: 3%;
      font-size: 13px;
 }
+
+
 
 
 @media only screen
@@ -495,9 +560,23 @@ and (max-width: 1024px) {
     width: 100%;
     height: 100%;
     position: absolute;
+    opacity: 0.8;
+
+}
+
+.color_overlay_banner {
+   background-color: #000000;
+
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     opacity: 0.5;
 
 }
+
+
+
 
 .writing-content {
   z-index: 1;
@@ -506,7 +585,7 @@ and (max-width: 1024px) {
   font-weight: bold;
 }
 .writing-content h1 {
- font-family: "CircularStd-Black";
+
 
  font-size: 40px;
 
@@ -569,4 +648,22 @@ and (max-width: 1024px) {
 
 }
 
+}
+
+
+
+
+
+.marginsupprimerblock {
+     display: flex;
+    flex-direction: column;
+    padding-top: 13px;
+    font-weight: bolder;
+
+}
+
+.marginsupprimer {
+
+    padding-top: 13px;
+    font-weight: bolder;
 }

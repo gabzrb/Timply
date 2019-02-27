@@ -3,6 +3,7 @@
     <div class="margin">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6">
+           <div class="margin_card_order">
           <div class="card_order">
             <h3 style="color: #518CE4  "> <%= humanized_money_with_symbol(@order.price) %></h3>
             <div class="line_category">
@@ -21,7 +22,7 @@
 
             </div>
             <div class="line">
-              <p>Prix La Poste: <%= humanized_money_with_symbol(@la_poste_price) %></p>
+              <p> Tarif des enveloppes pré-timbrés de la Poste: <%= humanized_money_with_symbol(@la_poste_price) %></p>
               <p style="color: #518CE4">Reduction: <%= humanized_money_with_symbol(@reduction) %></p>
             </div>
             <%= link_to "Ajouter à mes commandes", new_pack_order_payment_path(
@@ -29,15 +30,16 @@
           </div>
 
         </div>
+        </div>
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="card_info">
             <div class="ordinfo">
               <%= image_tag   "loupe.png", height: 120 %>
               <p> Verifiez le type d'envoi et la quantité.</p>
               <%= image_tag   "growth.png", height: 120 %>
-              <p>Ajouter votre commande afin de pouvoir procéder au paiement. Vous pourrez toujours y revenir plus tard une fois tout vos packs choisis.</p>
+              <p>Ajouter votre commande afin de pouvoir procéder au paiement. Vous pourrez toujours y revenir plus tard une fois tous vos packs choisis.</p>
               <%= image_tag   "suivi.png", height: 120 %>
-              <p> Envoi de votre pack en colissimo recommandée. </p>
+              <p> Envoi de votre pack en colissimo recommandé. </p>
             </div>
           </div>
         </div>

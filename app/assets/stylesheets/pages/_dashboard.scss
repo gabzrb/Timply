@@ -1,17 +1,48 @@
 
 .dashboard_upcard {
-  width:100%;
-  background-color: #ffffff;
-      margin-top: 2px;
-          margin-bottom: 3%;
+    width: 33%;
+    background-color: #308edc;
+    margin-top: 2%;
+    margin-left: 33%;
+    border-radius: 9px;
+}
+
+
+.dashboard_upcard h2 {
+        margin-top: 1px;
+    padding-top: 19px;
+    font-size: 30px;
+    color: #ffffff;
+    /* border-radius: 14px; */
+}
+
+@media only screen  and (min-device-width: 360px) and (max-device-width: 640px) {
+
+  .dashboard_upcard {
+    width: 81%;
+    background-color: #308edc;
+    margin-top: 7%;
+    margin-left: 11%;
+    border-radius: 9px;
 }
 
 .dashboard_upcard h2 {
-  margin-top: 1px;
-  padding-top: 6px;
-  font-size: 30px;
+    margin-top: 1px;
+    padding-top: 28px;
+    font-size: 30px;
+    }
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width: 736px) and (min-device-width: 414px) {
+
+.dashboard_upcard {
+    width: 87%;
+    background-color: #308edc;
+    margin-top: 7%;
+    margin-left: 8%;
+    border-radius: 9px;
+}
+}
 
 .dashboard_tabs {
   display: flex;
@@ -49,6 +80,31 @@
     }
 
 
+
+@media only screen  and (min-device-width: 360px) and (max-device-width: 640px) {
+ .dashboard_card {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+      flex-grow: 1;
+      padding: 22px 13px;
+    padding-left: 35px;
+}
+
+
+.dashboard_card img {
+    border-radius: 10px;
+    height: 27vh;
+    width: 71vw;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+
+}
+
     @media only screen
  and (min-device-width: 375px)
 and (max-width: 675px){
@@ -60,7 +116,8 @@ and (max-width: 675px){
     justify-content: space-between;
     align-items: center;
       flex-grow: 1;
-      padding: 22px;
+     padding: 22px 13px;
+    padding-left: 35px;
 
 }
 

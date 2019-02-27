@@ -44,9 +44,11 @@
         <div class="form-actions">
           <%= f.button :submit, "Modifier", class: "btn-inscription" %>
         </div>
+          <div class="marginsupprimer">
+         <p><%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sur ?" }, method: :delete %>  </p>
+            </div>
+
       <% end %>
  </div>
-   <div class="blanco">
-     <p><%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sur ?" }, method: :delete %></p>
-   </div>
+
 </div>

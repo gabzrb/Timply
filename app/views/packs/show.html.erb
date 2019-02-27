@@ -27,11 +27,13 @@
                     <%= f.input :format, collection: ["DL(stantard)","C4","C5","C6"],label: "Format d'enveloppe", required: true %>
                     <%= f.input :ar, label: "AR" if @pack.title == "Recommandés"%>
                     <%= f.input :pb, label: "Papier Bulle"%>
-                    <%= f.button :submit,"Recevez vos prix",class: " btn-form "%>
+                    <%= f.button :submit,"Recevoir mes prix",class: " btn-form "%>
                   <% end %>
                 </div>
               </div>
+
             </div>
+
           </div>
         </div>
       </div>
@@ -51,3 +53,4 @@
     </div>
   </div>
 </div>
+<%=render'shared/footer'%>

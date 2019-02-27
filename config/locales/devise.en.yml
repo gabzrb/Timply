@@ -3,16 +3,16 @@
 en:
   devise:
     confirmations:
-      confirmed: "Your email address has been successfully confirmed."
+      confirmed: "Votre addresse email a été enregistré avec succés"
       send_instructions: "Vous allez recevoir un email dans quelques instants"
       send_paranoid_instructions: "Vous allez recevoir un email dans quelques instants"
     failure:
       already_authenticated: "Vous êtes déja connecté"
-      inactive: "Your account is not activated yet."
-      invalid: "Invalid %{authentication_keys} or password."
-      locked: "Your account is locked."
-      last_attempt: "You have one more attempt before your account is locked."
-      not_found_in_database: "Invalid %{authentication_keys} or password."
+      inactive: "Votre compte n'est pas encore activé"
+      invalid: "Email ou mot de passe erroné. Veuillez réessayer"
+      locked: "Votre compte est bloqué"
+      last_attempt: "Vous avez une tentative de plus avant le blocage de votre compte"
+      not_found_in_database: "Votre email"
       timeout: "Your session expired. Please sign in again to continue."
       unauthenticated: "Vous devez vous inscrire pour continuer"
       unconfirmed: "Vous devez confirmer votre addresse email avant de continuer."
@@ -24,9 +24,9 @@ en:
       unlock_instructions:
         subject: "Unlock instructions"
       email_changed:
-        subject: "Email Changed"
+        subject: "Email modifié"
       password_change:
-        subject: "Password Changed"
+        subject: "Password modifié"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
@@ -37,7 +37,7 @@ en:
       updated: "Votre mot de passe a été modifié avec succés"
       updated_not_active: "Votre mot de passe a été modifié avec succés"
     registrations:
-      destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
+      destroyed: "En revoir ! Votre compte a été supprimé"
       signed_up: "Votre inscription a été enregistré avec succés."
       signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
       signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
@@ -49,7 +49,7 @@ en:
       signed_out: "Déconnexion, on espère vous revoir bientôt !"
       already_signed_out: "Déconnexion, on espère vous revoir bientôt"
     unlocks:
-      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+      send_instructions: "Vous allez recevoir un email dans quelques minutes pour débloquer votre compte"
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
   errors:

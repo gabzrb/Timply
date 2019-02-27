@@ -58,7 +58,84 @@ margin-top: 4%;
 background-color: white;
 border-radius: 10px;
     display: block;
+    padding-right: 10px;
 }
+
+
+
+
+@media only screen  and (min-device-width: 360px) and (max-device-width: 640px) {
+
+.a img {
+    border-radius: 10px;
+    margin-top: 4%;
+    width: 65vw;
+    margin-left: 15%;
+    display: flex;
+}
+
+.card_form {
+    width: 91vw;
+    height: 84vh ;
+    margin-top: 4%;
+    background-color: white;
+    border-radius: 10px;
+    display: block;
+
+}
+
+.form-group {
+margin-left: 0% !important;
+}
+
+.detail {
+display: block;
+   max-width: 100%;
+   color: white;
+}
+
+.b img {
+    width: 58vw;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    margin-left: 30%;
+    height: 23vh;
+}
+
+}
+
+
+
+
+
+
+
+.decal {
+ margin-left: 24%;
+}
+
+.btn-form {
+        padding: 10px 12px;
+         border: 1px solid #308edc;
+    border-radius: 7px;
+    color: white;
+    background-color: #308edc;
+
+
+}
+
+
+
+.margin2 {
+ margin-top: 6%;
+    margin-bottom: 3%;
+      color: white;
+}
+
+
+
+
 
 @media only screen
  and (min-device-width: 375px)
@@ -66,7 +143,7 @@ and (max-width: 675px)
 and (-webkit-min-device-pixel-ratio: 2){
 
 .card_form {
-width: 79vw ;
+width: 93vw ;
 height: 82vh !important;
 margin-top: 4%;
 background-color: white;
@@ -75,26 +152,29 @@ border-radius: 10px;
 }
 
 .form-group {
-margin-left: 1% !important;
+margin-left: 0% !important;
 }
- .a img {
+
+.a img {
     border-radius: 10px;
     margin-top: 4%;
     width: 58vw;
-    margin-left: 10%;
+    margin-left: 18%;
     display: flex;
-    }
+}
+
 .detail {
 display: block;
-   max-width: 90%;
+   max-width: 100%;
    color: white;
 }
 
 .b img {
-  width: 74vw;
+    width: 61vw;
     border-radius: 10px;
     margin-bottom: 10px;
     display: flex;
+    margin-left: 25%;
 }
 
 
@@ -138,11 +218,42 @@ margin-top: 1%;
 .margin2 {
  margin-top: 6%;
     margin-bottom: 3%;
-      font-family: 'Lobster', cursive;
       color: white;
 }
 
 
+
+
+// @media only screen
+// and (max-width: 812px) and (-webkit-device-pixel-ratio : 3) {
+
+// .a img {
+//     border-radius: 10px;
+//     margin-top: 4%;
+//     width: 70vw;
+//     margin-left: 10%;
+//     display: flex;
+// }
+
+//   .detail {
+// display: block;
+//    max-width: 100%;
+//    color: white;
+// }
+
+// .card_form {
+//   width: 84vw;
+//   height: 68vh !important;
+//   margin-top: 4%;
+//   background-color: white;
+//   border-radius: 10px;
+//   display: block;
+//   }
+
+//   .row {
+//     margin-left: 2px;
+// }
+// }
 
 @media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) {
 
@@ -166,6 +277,7 @@ margin-left: 1% !important;
     margin-bottom: 10px;
     display: flex;
         height: 22vh;
+            margin-left: 5%;
 }
 
   }

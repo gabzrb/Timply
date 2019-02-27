@@ -22,10 +22,11 @@
         <div class="form-actions">
           <%= f.button :submit, "Se connecter", class: "btn-inscription" %>
         </div>
+              <div class="marginsupprimerblock">
+        <%= link_to "Nouveau ? Inscrivez-vous", new_user_registration_path %>
+            <%= link_to "Mot de passe oublié ?",  new_user_password_path %>
+          </div>
       </div>
       <% end %>
-      <div class="blanco">
-      <%= link_to "Nouveau ? Inscrivez-vous", new_user_registration_path %>
-            <%= link_to "Mot de passe oublié ?",  new_user_password_path %>
-      </div>
+
  </div>

@@ -20,7 +20,7 @@
            <%= f.input :email,
                 required: true,
                 autofocus: true ,
-                 placeholder: "jepaiemestimbres@gmail.com",
+                 placeholder: "mestimbres@gmail.com",
                 input_html: { autocomplete: "email" }%>
       </div>
 
@@ -64,13 +64,14 @@
         <div class="form-actions">
       <%= f.button :submit, "S'inscrire", class: "btn-inscription"%>
     </div>
+      <div class="marginsupprimer">
+    <strong> <%= render "devise/shared/links" %> </strong>
+  </div>
   </div>
 
 
 <% end %>
-<div class="blanco">
-<strong> <%= render "devise/shared/links" %> </strong>
-</div>
+
 </div>
 
 
