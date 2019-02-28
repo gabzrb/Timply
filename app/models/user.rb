@@ -6,4 +6,16 @@ class User < ApplicationRecord
   has_many :orders
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true
+
+  after_create :welcome_user
+
+
+  private
+
+  after_create :send_signup_email
+  private
+
+  def send_signup_email
+    UserNotifier.welcome(self).deliver_now
+  end
 end

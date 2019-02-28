@@ -2,6 +2,7 @@ class UserNotifierMailer < ApplicationMailer
 
 
 
+
   class UserNotifier < ActionMailer::Base
     default :from => 'gabrielzerbib6@gmail.com'
 
