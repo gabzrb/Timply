@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true
 
-  after_create :welcome_user
+
 
 
   private
@@ -16,6 +16,6 @@ class User < ApplicationRecord
   private
 
   def send_signup_email
-    UserNotifier.welcome(self).deliver_now
+    UserNotifier.send_signup_email(self).deliver_now
   end
 end
