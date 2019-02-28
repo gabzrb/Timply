@@ -14,6 +14,6 @@ class User < ApplicationRecord
 
   def welcome_user
     UserMailer.welcome_user(self).deliver
-    redirect_to root_path
+
   end
 end
