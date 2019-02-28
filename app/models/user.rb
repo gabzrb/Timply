@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
 
   def welcome_user
-    UserNotifier.welcome_user(self).deliver
+    UserMailer.welcome_user(self).deliver
     redirect_to root_path
   end
 end
