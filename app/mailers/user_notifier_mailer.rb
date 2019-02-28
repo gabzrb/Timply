@@ -9,4 +9,4 @@ layout 'mailer'
             :subject => 'Bienvenue!' )
     end
   end
-end
+
