@@ -1,6 +1,7 @@
- class UserNotifier < ActionMailer::Base
-    default :from => 'gabrielzerbib6@gmail.com'
 
+  class UserNotifier < ActionMailer::Base
+    default :from => 'gabrielzerbib6@gmail.com'
+layout 'mailer'
     # send a signup email to the user, pass in the user object that   contains the user's email address
     def send_signup_email(user)
       @user = user
@@ -8,4 +9,4 @@
             :subject => 'Bienvenue!' )
     end
   end
-
+end
