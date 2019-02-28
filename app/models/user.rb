@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   private
 
-  after_create :send_signup_email
+
 
 
 
