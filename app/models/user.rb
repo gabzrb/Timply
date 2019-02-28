@@ -12,8 +12,10 @@ class User < ApplicationRecord
 
   private
 
-
+  after_create :send_signup_email
   private
 
-
+  def send_signup_email
+    UserNotifier.send_signup_email(self).deliver_now
+  end
 end
