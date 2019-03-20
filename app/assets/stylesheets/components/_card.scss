@@ -14,6 +14,54 @@
    width: 25%;
   }
 }
+
+
+//Mac 13pouce
+@media only screen  and (min-device-width: 1050px) and (max-device-width: 1680px) {
+.card {
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height: 50vh !important;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+}
+
+
+@media only screen  and (min-device-width: 900px) and (max-device-width: 1440px) {
+.card {
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height:   49vh ;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+}
+//MAC 15pouce
+@media only screen  and (min-device-width: 1200px) and (max-device-width: 1920px) {
+  .card {
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height: 32vh;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+}
+
 // Samsung
 
 @media only screen  and (min-device-width: 360px) and (max-device-width: 640px) {
@@ -147,7 +195,7 @@ and (-webkit-min-device-pixel-ratio: 2){
 @media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) {
 
   .card {
-    height: 35vh;
+    height: 39vh;
     width: 80%;
   }
 
@@ -163,9 +211,8 @@ and (-webkit-min-device-pixel-ratio: 2){
 
 
 
-
 .card-image {
-  height: 46%;
+  height: 45%;
   width: 100%;
   background-size: cover;
   border-radius: 7px 7px 0px 0px;

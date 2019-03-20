@@ -1,7 +1,26 @@
 // Specific CSS for your home-page
+.mentions {
+margin-top: 10px;
 
+}
 
+.phoneicon {
+  margin-bottom: 6px;
+}
 
+.phoneflex {
+    display: block;
+    align-items: center;
+}
+
+.mailflex {
+      display: block;
+    align-items: center;
+}
+
+.mailflex p {
+  margin-left: 17px;
+}
 
 .difference {
   margin-top: 10%;
@@ -9,7 +28,7 @@
 
 .margin-icon {
 
- 
+
 }
 
 .margin-watch {
@@ -38,7 +57,7 @@ flex-direction: row;
 
 
 .wrapper h3 {
-  font-size: 29px;
+  font-size: 24px;
     color: #08264D;
     font-weight: 200;
 }
@@ -48,10 +67,8 @@ flex-direction: row;
   text-decoration: none;
 }
 
-#email {
-      margin-right: 15px;
-
-    margin-top: 25px;
+#email h3 {
+  margin-top: 10px;
 }
 
 
@@ -107,3 +124,7 @@ and (max-width: 1024px) {
   font-size: 15px;
   color: #09264D;
 }
+
+
+
+

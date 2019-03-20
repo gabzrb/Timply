@@ -6,14 +6,12 @@ class User < ApplicationRecord
   has_many :orders
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true
-
-  after_create :welcome_user
-
+  after_create :send_welcome_email
 
 
+  private
 
-  def welcome_user
-    UserMailer.welcome_user(self).deliver
-
+  def send_welcome_email
+    UserMailer.welcome(self).deliver_now
   end
 end

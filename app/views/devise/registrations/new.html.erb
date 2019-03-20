@@ -57,6 +57,7 @@
            </div>
 
 
+
           <div class="col-xs-12">
           <%= f.input :siret %>
           </div>
@@ -64,7 +65,12 @@
         <div class="form-actions">
       <%= f.button :submit, "S'inscrire", class: "btn-inscription"%>
     </div>
+        <div class="confirm-data">
+            <%= f.input :comfirm_data, label: false, as: :boolean, boolean_style: :inline  %>
+              <label for="resource_confirm_data">J'accepte les  <%= link_to "Conditions d'Utilisations", mentionslegales_path %></label>
+       </div>
       <div class="marginsupprimer">
+
     <strong> <%= render "devise/shared/links" %> </strong>
   </div>
   </div>

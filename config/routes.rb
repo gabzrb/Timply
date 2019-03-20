@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # get '/tracking', to: 'pages#tracking'
   # post '/trackingresult', to: 'pages#trackingresult'
   get '/mentionslegales', to: 'pages#mentionslegales'
+  get '/conditionsgenerales', to: 'pages#conditionsgenerales'
   get '/apropos', to: 'pages#apropos'
   resources :contacts, only: [:new, :create]
   get :order_confirmation, to: 'orders#order_confirmation'

@@ -28,11 +28,11 @@ PRIO = ["Lettre Prioritaire", "Lettre Prioritaire Internationale"]
 SUIVIE = ["Lettre Suivie"]
 RECO = ["Recommandée R1", "Recommandée R2", "Recommandée R3", "Recommandée R1 Internationale", "Recommandée R2 Internationale"]
 
-packvert = Pack.create!(title: TITLES[0], category:VERT, photo:"https://i.ibb.co/Z2Jjz9Y/Screen-Shot-2018-12-18-at-20-22-59.png", infos: INFO_Vert, description:DESCRIPTION_V, delivered:
+packvert = Pack.create!(title: TITLES[0], category:VERT, photo:"https://i.ibb.co/KW18zrN/Screen-Shot-2019-03-19-at-13-37-07.png", infos: INFO_Vert, description:DESCRIPTION_V, delivered:
                         DELIVERED_V )
-packprio = Pack.create!(title: TITLES[1], category:PRIO, photo: "https://i.ibb.co/RNMcFqG/Screen-Shot-2018-12-18-at-19-29-54.png",infos: INFO_Prio, description:DESCRIPTION_P, delivered:DELIVERED_P  )
-packsuivie = Pack.create!(title: TITLES[2], category:SUIVIE, photo: "https://i.ibb.co/KKLQdXy/Screen-Shot-2018-12-18-at-19-34-33.png",infos: INFO_Suivie, description:DESCRIPTION_S, delivered:DELIVERED_S )
-packreco = Pack.create!(title: TITLES[3], category:RECO, photo: "https://i.ibb.co/NVnmv8p/Screen-Shot-2018-12-18-at-20-24-37.png",infos: INFO_Recomandé, description:DESCRIPTION_R, delivered:DELIVERED_R )
+packprio = Pack.create!(title: TITLES[1], category:PRIO, photo: "https://i.ibb.co/37mctgw/Screen-Shot-2019-03-19-at-13-34-39.png",infos: INFO_Prio, description:DESCRIPTION_P, delivered:DELIVERED_P  )
+packsuivie = Pack.create!(title: TITLES[2], category:SUIVIE, photo: "https://i.ibb.co/LQLGqVN/Screen-Shot-2019-03-19-at-13-30-28.png",infos: INFO_Suivie, description:DESCRIPTION_S, delivered:DELIVERED_S )
+packreco = Pack.create!(title: TITLES[3], category:RECO, photo: "https://i.ibb.co/Qrk9PRZ/reco.png",infos: INFO_Recomandé, description:DESCRIPTION_R, delivered:DELIVERED_R )
 
 admin = User.create!(name: "Gabriel Zerbib", entreprise: "Timply", address: "4bis rue Benjamin Delessert", email: "gabrielzerbib6@gmail.com", password: "123456", admin: true)
 admin = User.create!(name: "Ilan Millet", entreprise: "Timply", address: "12 rue Vivienne", email: "ilan.millet@gmail.com", password: "vestige", admin: true)

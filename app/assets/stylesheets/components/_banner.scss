@@ -12,6 +12,16 @@
 }
 
 
+.confirm-data {
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+}
+
+.confirm-data label {
+  margin-left: 5px;
+}
+
 .banner-content {
   display: flex;
   flex-direction: column;
@@ -168,7 +178,7 @@ padding-top: 11px;
 }
 .card_inscription {
     width: 33vw;
-    height: 102vh;
+    height: 105vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -201,47 +211,25 @@ padding-top: 11px;
 }
 
 
-@media only screen  and (min-device-width: 360px) and (max-device-width: 640px) {
 
 
 
-}
-
-
-
+//iphone 6
 @media only screen
  and (min-device-width: 375px)
 and (max-width: 675px)
-{ .card_inscription {
-      width: 83vw;
-    height: 132vh;
-    text-align: center;
-    background-color: white;
-    border-radius: 5px;
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 2%;
-    margin-top: 3%;
-     font-size: 12px;
-}
-
-.card_inscription h2 {
-        font-size: 25px;
-  }
-
+{
   .form-row {
     margin-left: 10px;
   }
 
 }
 
-
+//iphone 6+
 @media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width: 736px) and (min-device-width: 414px) {
   .card_inscription {
     width: 70vw !important;
-    height: 128vh !important ;
+    height: 133vh !important ;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -277,7 +265,7 @@ and (max-width: 1024px)
 
 .card_inscription {
     width: 59vw;
-    height: 55vh;
+    height: 98vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -290,6 +278,36 @@ and (max-width: 1024px)
 }
 }
 
+@media only screen
+ and (min-device-width: 1024px)
+and (max-width: 1036px)
+{
+.card_inscription {
+    width: 59vw;
+    height: 67vh;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+}
+
+.banner-inscription {
+    color: black;
+    position: relative;
+    background-size: cover !important;
+    flex-direction: column;
+    display: flex;
+    height: 100VH;
+    justify-content: center;
+    align-items: center;
+}
+
+}
 
 // Page de connexion
 .banner-connexion {
@@ -378,7 +396,7 @@ and (max-width: 1024px)
 
 .card_inscription {
     width: 82vw ;
-    height: 140vh ;
+    height: 148vh ;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -681,6 +699,5 @@ and (max-width: 1024px) {
 
 .marginsupprimer {
 
-    padding-top: 13px;
     font-weight: bolder;
 }

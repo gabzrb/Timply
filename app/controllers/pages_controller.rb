@@ -1,6 +1,6 @@
 
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :mentionslegales, :apropos]
+  skip_before_action :authenticate_user!, only: [:home, :mentionslegales, :apropos, :conditionsgenerales]
   def home
   end
 
@@ -30,5 +30,8 @@ class PagesController < ApplicationController
   end
 
   def apropos
+  end
+
+  def conditionsgenerales
   end
 end
