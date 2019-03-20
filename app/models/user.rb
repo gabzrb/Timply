@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :orders
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true
+  validates :prenom, presence:true
   validates :address, presence: true
   after_create :send_welcome_email
 
