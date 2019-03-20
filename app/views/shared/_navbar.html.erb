@@ -20,12 +20,12 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to edit_user_registration_path do %>
-                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Paramètres") %>
+                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Profile") %>
               <% end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Se déconnecter") %>
+             <i class="fas fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Se déconnecter") %>
               <% end %>
             </li>
           </ul>
@@ -44,30 +44,39 @@
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <% if user_signed_in? %>
-         <li>
-            <%= link_to 'Notre mission', apropos_path %>
-            </li>
 
-             <li>
-            <%= link_to 'Commander', packs_path %>
-            </li>
 
-            <li>
-             <%= link_to 'Mes commandes', dashboard_path %>
-            </li>
-             <li>
-            <%= link_to 'Contactez-nous', new_contact_path %>
-            </li>
+
+
+
+
 
           <li>
             <%= link_to edit_user_registration_path do %>
               <i class="fa fa-cog"></i>  <%= t(".settings", default: "Profile") %>
             <% end %>
           </li>
+
+            <li>
+          <%= link_to packs_path do %> <i class= "fas fa-envelope"></i> Commander <% end %>
+            </li>
+
+              <li>
+             <%= link_to  dashboard_path do %>  Mes commandes <% end %>
+            </li>
+
+              <li>
+            <%= link_to  new_contact_path do %>  Contactez-nous <% end %>
+            </li>
+
+           <li>
+            <%= link_to  apropos_path do %>  Notre mission <% end %>
+            </li>
+
           <li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Se deconnecter") %>
+          <i class="fas fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Se deconnecter") %>
               <% end %>
             </li>
 
