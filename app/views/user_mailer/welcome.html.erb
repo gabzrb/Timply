@@ -1,5 +1,9 @@
-<p>Hi <%= @user.name %>,</p>
+<div class="text-center">
+ <%= image_tag "logo.png", height: 50 %>
+<h3>Merci pour votre inscription <%=@user.prenom%>
+  <%= @user.name %> </h3>
 
-<p>Today we'll talk about SMTP and Postmark!</p>
+<p>Envoyer votre courrier simplement. Réduiser vos couts. Gagne' du temps.</p>
 
-<p>See ya!</p>
+<%= link_to 'Réduire mes coûts',root_path, class: "btn   btn-cta center-block" %>
+</div>
