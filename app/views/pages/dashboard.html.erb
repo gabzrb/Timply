@@ -13,7 +13,7 @@
      <p> <%= order.format %> </p>
       <p> <%= order.tracking %>                   </p>
       <p> <%= order.weight %> </p>
-      <p><%= order.state %></p>
+
       <p><%= humanized_money_with_symbol(order.price) %></p>
 
         <%= link_to "Payer", new_pack_order_payment_path(order.pack_id, order),class: "btn btn-cta_dashboard" if order.state == 'pending' %>
