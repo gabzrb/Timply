@@ -23,6 +23,7 @@ gem 'kaminari'
 gem "figaro"
 gem 'rest-client'
 gem 'sitemap_generator'
+gem "fog-aws"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
