@@ -22,6 +22,7 @@ gem 'stripe'
 gem 'kaminari'
 gem "figaro"
 gem 'rest-client'
+gem 'sitemap_generator'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
