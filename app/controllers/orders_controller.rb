@@ -33,9 +33,15 @@ class OrdersController < ApplicationController
     @order.pack_sku = @order.category.gsub(' ', '-')
     @order.state = 'pending'
     @order.price = (PACKS[@order.category.to_sym][@order.weight.to_sym].first.to_f)*@order.quantity.to_i if (@order.quantity && @order.weight && @order.category != "")
-    @order.price += Money.new(115, 'EUR') if ["Recommandée R1", "Recommandée R2", "Recommandée R3"].include?(@order.category)
-    @order.price += Money.new(140, 'EUR') if ["Recommandée R1 Internationale", "Recommandée R2 Internationale"].include?(@order.category)&& @order.category
-    @order.reduction = Money.new(((PACKS[@order.category.to_sym][@order.weight.to_sym].last.to_f)*@order.quantity.to_i)* 100, 'EUR') - @order.price if (@order.quantity && @order.weight && @order.category != "")
+    if ["Recommandée R1", "Recommandée R2", "Recommandée R3"].include?(@order.category) || @order.ar
+      @order.price += Money.new(115, 'EUR')
+      @order.reduction = Money.new(115, 'EUR')
+    end
+    if ["Recommandée R1 Internationale", "Recommandée R2 Internationale"].include?(@order.category) && @order.category
+      @order.price += Money.new(140, 'EUR')
+      @order.reduction = Money.new(140, 'EUR')
+    end
+    @order.reduction += Money.new(((PACKS[@order.category.to_sym][@order.weight.to_sym].last.to_f)*@order.quantity.to_i)* 100, 'EUR') - @order.price if (@order.quantity && @order.weight && @order.category != "")
     @order.user_id = current_user.id
     @order.pack_id = @pack.id
     if @order.save
