@@ -1,0 +1,49 @@
+<!-- Modal -->
+<div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <!--Content-->
+    <div class="modal-content form-elegant">
+      <!--Header-->
+      <div class="modal-header text-center">
+        <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Se connecter</strong></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body mx-4">
+        <!--Body-->
+       <%= simple_form_for(@instance_user, url: session_path(@instance_user)) do |f| %>
+  <%= f.error_notification %>
+ <div class="form-inputs">
+    <%= f.input :email,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "email" } %>
+    <%= f.input :password,
+                required: false,
+                input_html: { autocomplete: "current-password" } %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit,  "Connexion",class: "btn-modal"%>
+  </div>
+<% end %>
+
+
+      </div>
+      <!--Footer-->
+      <div class="modal-footer mx-5 pt-3 mb-1">
+        <p class="font-small grey-text d-flex justify-content-end">Pas encore membre ?
+          <%= link_to "Inscrivez-vous", new_user_registration_path, class: "blue-text ml-1" %> </p>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Modal -->
+
+  <a href="" class=" navbar-wagon-item navbar-wagon-link" data-toggle="modal" data-target="#elegantModalForm">Connexion</a>
+

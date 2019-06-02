@@ -1,4 +1,5 @@
 <div class="navbar-wagon">
+    <% @instance_user = User.new %>
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo.png", height: 50 %>
@@ -35,7 +36,7 @@
       <!-- Login link (when logged out) -->
       <%= link_to 'Commander', packs_path, class: " btn btn-cta-nav center-block navbar-wagon-item navbar-wagon-link" %>
       <%= link_to 'Inscription', new_user_registration_path, class: " btn btn-primary center-block navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+       <%= render 'shared/modal_sign_in' %>
     <% end %>
   </div>
   <!-- Dropdown list appearing on mobile only -->

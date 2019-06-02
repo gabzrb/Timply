@@ -178,7 +178,6 @@ padding-top: 11px;
 }
 .card_inscription {
     width: 33vw;
-    height: 105vh;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -229,7 +228,6 @@ and (max-width: 675px)
 @media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width: 736px) and (min-device-width: 414px) {
   .card_inscription {
     width: 70vw !important;
-    height: 133vh !important ;
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -265,7 +263,7 @@ and (max-width: 1024px)
 
 .card_inscription {
     width: 59vw;
-    height: 98vh;
+
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -284,7 +282,7 @@ and (max-width: 1036px)
 {
 .card_inscription {
     width: 59vw;
-    height: 67vh;
+
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -396,7 +394,7 @@ and (max-width: 1036px)
 
 .card_inscription {
     width: 82vw ;
-    height: 148vh ;
+
     text-align: center;
     background-color: white;
     border-radius: 5px;

@@ -1,6 +1,6 @@
-PCK = {"Lettre Verte": ["0.83", "1,08"],
-       "Lettre Prioritaire": ["1","1,25"],
-       "Lettre Suivie": ["1.20","1,48"],
+PCK = {"Lettre Verte": ["0.79", "0.88"],
+       "Lettre Prioritaire": ["0.94","1.05"],
+       "Lettre Suivie": ["1.10","1,48"],
        "Recommandés": ["3,98","4.18"]}
 
 
@@ -12,7 +12,7 @@ class PacksController < ApplicationController
   end
 
   def show
-    @poids = ["20g", "50g", "100g", "250g", "500g", "1kg", "2kg", "3kg"]
+    @poids = ["20g", "100g", "250g", "500g", "3kg"]
     @pack = Pack.find(params[:id])
     @packs = Pack.where.not(id:@pack.id)
     @show_prices = [PCK[@pack.title.to_sym][0], PCK[@pack.title.to_sym][1]]
