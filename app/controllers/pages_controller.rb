@@ -1,8 +1,11 @@
 
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :mentionslegales, :apropos, :conditionsgenerales]
+  skip_before_action :authenticate_user!, only: [:home, :mentionslegales, :apropos, :conditionsgenerales,]
+
   def home
   end
+
+
 
   def dashboard
     @orders = Order.where(id: current_user.order_ids).reverse
@@ -34,4 +37,6 @@ class PagesController < ApplicationController
 
   def conditionsgenerales
   end
+
+
 end
