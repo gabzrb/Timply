@@ -34,8 +34,8 @@ packprio = Pack.create!(title: TITLES[1], category:PRIO, photo: "https://i.ibb.c
 packsuivie = Pack.create!(title: TITLES[2], category:SUIVIE, photo: "https://i.ibb.co/ZV4qWd1/Screen-Shot-2019-03-20-at-11-17-56.png",infos: INFO_Suivie, description:DESCRIPTION_S, delivered:DELIVERED_S )
 packreco = Pack.create!(title: TITLES[3], category:RECO, photo: "https://i.ibb.co/v1Y8RQ4/Screen-Shot-2019-03-20-at-11-20-15.png",infos: INFO_Recomandé, description:DESCRIPTION_R, delivered:DELIVERED_R )
 
-admin = User.create!(name: "Gabriel Zerbib", entreprise: "Timply", address: "4bis rue Benjamin Delessert", email: "gabrielzerbib6@gmail.com", password: "123456", admin: true)
-admin = User.create!(name: "Ilan Millet", entreprise: "Timply", address: "12 rue Vivienne", email: "ilan.millet@gmail.com", password: "vestige", admin: true)
-admin = User.create!(name: "Marc Uzan", entreprise: "Timply", address: "12 rue Vivienne", email: "murcii26@yahoo.fr", password: "vestige", admin: true)
+admin = User.create!(name: "Gabriel Zerbib", prenom: "Gabriel", entreprise: "Timply", address: "4bis rue Benjamin Delessert", email: "gabrielzerbib6@gmail.com", password: "123456", admin: true)
+admin = User.create!(name: "Ilan Millet", prenom: "Ilan", entreprise: "Timply", address: "12 rue Vivienne", email: "ilan.millet@gmail.com", password: "vestige", admin: true)
+admin = User.create!(name: "Marc Uzan", prenom: "Marc", entreprise: "Timply", address: "12 rue Vivienne", email: "murcii26@yahoo.fr", password: "vestige", admin: true)
 
 puts "C'est bon c'est fait on peut coder!"

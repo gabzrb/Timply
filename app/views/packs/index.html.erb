@@ -1,47 +1,44 @@
-<div class="cover" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);
+c<div class="cover" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);
  url(<%= image_path 'banner2.png' %>);">
+
   <div class="container">
-    <div class="writing">
-    <div class="row">
+     <h1 >Nos packs d'enveloppes pré-timbrées</h1>
 
-        <h1 class="text-center ">Nos packs d'enveloppes pré-timbrées</h1>
-      </div>
-      <div class="margin">
+    <div class="row justify-content-md-center">
+
+
+
+
         <% @packs.each do |pack|  %>
-          <div class="col col-xs-12  col-sm-6 col-md-3 ">
+      <div class="col-md-3 col-sm-12">
+<div class="cardproduit ">
+  <div class="cardproduit-img" style="background-image:url(https://i.ibb.co/ZYTRSrw/minipack.jpg);">
+    <div class="overlay">
+      <div class="overlay-content">
+         <%= link_to pack.title, pack_path(pack) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardproduit-content">
+    <a href="#!">
+      <h2><%= pack.title %></h2>
+      <p>Économisez jusqu'a 20% sur vos envois.</p>
+
+    </a>
+  </div>
+</div>
+</div>
 
 
 
-            <div class="card">
-              <% if pack.photo.nil? %>
-                <div class="card-image" style="background-image:
-url(<%= image_path 'truc.png'  %>);">
-                </div>
-              <% else %>
-                <div class="card-image" style="background-image:
-url(<%= pack.photo  %>);">
-                </div>
-              <% end %>
-              <div class="post-content">
-                <div class="sub_title text-center">
-                  <%= image_tag("stopwatch.png")%>
-                  <p> <%= pack.delivered %>
-                  </p>
-                </div>
-                <div class="sub_title2 text-center ">
-                  <%= image_tag("coins.png")%>
-                  <p><%= pack.description%>
-                  </p>
-                </div>
-              </div>
-              <div class="  text-center">
-                <%= link_to "Commander",pack_path(pack), class: " btn-card nounderline" %>
-              </div>
-            </div>
-          </div>
+
+
+
+
         <% end %>
       </div>
     </div>
   </div>
-</div>
+
 <%=render'shared/footer'%>
