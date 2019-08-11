@@ -11,6 +11,9 @@
 
 }
 
+.flex-product{
+  margin-top: 10%;
+}
 
 .confirm-data {
     display: flex;
@@ -169,16 +172,28 @@ padding-top: 11px;
 
 .banner-inscription {
 
-  color: black;
-  position: relative;
+
     background-size: cover !important;
-    flex-direction: column;
+
+}
+
+
+.card_contact {
+text-align: center;
+    background-color: white;
+    border-radius: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: baseline;
     align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 13px;
+
+
 }
 .card_inscription {
-    width: 33vw;
+
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -189,10 +204,13 @@ padding-top: 11px;
     margin-bottom: 2%;
     margin-top: 3%;
     font-size: 13px;
+
 }
+
 
 .card_inscription h2 {
   font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .blanco {
@@ -699,4 +717,5 @@ and (max-width: 1024px) {
 .marginsupprimer {
 
     font-weight: bolder;
+    margin-bottom:  10px;
 }

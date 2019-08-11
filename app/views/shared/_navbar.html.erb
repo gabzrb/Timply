@@ -8,7 +8,7 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to 'Nos tarifs', 'Timply.pdf', :target => "_blank",class: " navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to 'Nos tarifs', asset_path("timply2.pdf"), :target => "_blank",class: " navbar-wagon-item navbar-wagon-link" %>
          <%= link_to 'Notre mission', apropos_path, class: " navbar-wagon-item navbar-wagon-link" %>
          <%= link_to 'Contactez-nous', new_contact_path, class: " navbar-wagon-item navbar-wagon-link" %>
           <%= link_to 'Suivi de vos envois', 'https://packsdenveloppes.aftership.com/', class: " navbar-wagon-item navbar-wagon-link" %>
@@ -35,7 +35,7 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-        <%= link_to 'Nos tarifs', 'Timply.pdf', :target => "_blank",class: " navbar-wagon-item navbar-wagon-link" %>
+        <%= link_to 'Nos tarifs', asset_path("timply2.pdf"), :target => "_blank",class: " navbar-wagon-item navbar-wagon-link" %>
          <%= link_to 'Notre mission', apropos_path, class: " navbar-wagon-item navbar-wagon-link" %>
          <%= link_to 'Contactez-nous', new_contact_path, class: " navbar-wagon-item navbar-wagon-link" %>
       <%= link_to 'Commander', packs_path, class: " btn btn-cta-nav center-block navbar-wagon-item navbar-wagon-link" %>
