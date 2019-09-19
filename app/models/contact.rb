@@ -6,14 +6,11 @@ class Contact < MailForm::Base
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message,   :validate => true
 
-
-
   def headers
     {
       :subject => "Contact Form",
       :to => "contact@timply.fr",
-      :from => %("#{prenom}" "#{name}" <#{email}>),
-
+      :from => %("#{prenom}" "#{name}" <#{email}>)
     }
   end
 end
