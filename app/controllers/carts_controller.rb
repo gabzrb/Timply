@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
-  def index
+  def show
+    @user_cart = current_user.cart
   end
 end
