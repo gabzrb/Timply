@@ -1,14 +1,25 @@
-    .btn-primary {
+.btn-primary {
     background-color: #ffffff;
     border: 1px solid #308edc;;
     border-radius: 19px;
    padding:  7px 17px;
   }
 
+.btn-nav {
+  color: #308edc;
+  border: 1px solid #308edc;
+  border-radius: 19px;
+  padding:  7px 17px;
+  }
+
+.btn-nav:hover {
+  background-color:#308edc;
+  color: #ffffff;
+}
 
 
  .btn-cta-nav  {
-   border: 1px solid #308edc;;
+   border: 1px solid #308edc;
    border-radius: 19px;
    color: white;
    background-color: #308edc;
