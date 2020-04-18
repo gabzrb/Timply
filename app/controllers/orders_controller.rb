@@ -64,6 +64,9 @@ def create
     if current_user.admin
       @order.destroy
       redirect_to orders_path
+    elsif params[:cart]
+      @order.destroy
+      redirect_to cart_path(current_user.cart)
     else
       @order.destroy
       redirect_to dashboard_path
