@@ -6,4 +6,8 @@ class CartsController < ApplicationController
     @total_cent = @user_cart.orders.map{|o| o.price_cents}.sum
     @sku = @user_cart.orders.map{|o| o.pack_sku}.join('_')
   end
+
+  def cart_confirmation
+    raise
+  end
 end

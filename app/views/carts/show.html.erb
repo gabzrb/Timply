@@ -29,9 +29,8 @@
             <span>Montant: <%= humanized_money_with_symbol(@total) %></span>
         </label>
     </article>
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-name="Timply" data-email="<%= current_user.email %>" data-description="<%= @sku %>" data-amount="<%= @total_cent %>" data-label="Payer" data-locale="auto" data-currency="<%= @user_cart.orders[0].price.currency %>"></script>
+
+    <script src="https://checkout.stripe.com/checkout.js" data-key="<%= ENV['STRIPE_PUBLISHABLE_TEST_KEY'] %>" class="stripe-button" data-name="Timply" data-email="<%= current_user.email %>" data-description="<%= @sku %>" data-amount="<%= @total_cent %>" data-label="Payer" data-locale="auto" data-currency="<%= @user_cart.orders[0].price.currency %>"></script>
     <% end %>
     <% end %>
 </div>
-
-<%# data-key="pk_live_v5INg7sM1mnBwsO5d1u7ukWd" %>

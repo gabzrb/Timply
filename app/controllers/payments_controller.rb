@@ -21,7 +21,7 @@ class PaymentsController < ApplicationController
        order.update(payment: charge.to_json, state: 'paid', cart_id: nil)
     end
     #TODO redirection to confirmation
-    redirect_to @cart
+    redirect_to cart_confirmation_path
 
   rescue Stripe::CardError => e
     flash[:alert] = e.message
