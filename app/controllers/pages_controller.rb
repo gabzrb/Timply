@@ -38,5 +38,6 @@ class PagesController < ApplicationController
   def conditionsgenerales
   end
 
-
+  def nostarif
+  end
 end
