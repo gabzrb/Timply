@@ -10,8 +10,27 @@
   position: relative;
 }
 
+.banner_nostarifs {
+  color: white;
+  text-align: center;
+  height: 40vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom : 15px;
+}
+
+
 .flex-product {
   margin-top: 10%;
+  text-align: center;
+}
+
+.flex-product2 {
+  margin-top: 70px;
   text-align: center;
 }
 
@@ -617,4 +636,17 @@
 .marginsupprimer {
   font-weight: bolder;
   margin: 10px 0;
+}
+
+
+@media (max-width: 1200px) {
+  .banner-apropos {
+    color: black;
+    background-size: cover !important;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+  }
 }

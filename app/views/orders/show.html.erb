@@ -1,9 +1,10 @@
-<div class="banner-order" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);">
+<body class="banner-inscription" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);">
+
+<div class="flex-product2">
+
     <div class="container text-center">
-        <div class="margin">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
-                    <div class="margin_card_order">
                         <div class="card_order">
                             <h3 style="color: #518CE4  "> <%= humanized_money_with_symbol(@order.price) %></h3>
                             <div class="line_category">
@@ -26,11 +27,10 @@
                                 <p style="color: #518CE4">Reduction: <%= humanized_money_with_symbol(@reduction) %></p>
                             </div>
                             <%= link_to "Ajouter à mon panier", cart_path(
-    current_user.cart),class: "btn   btn-cta center-block"%>
+    current_user.cart),class: "btn   btn-cta2 center-block"%>
                         </div>
-
                     </div>
-                </div>
+
                 <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="card_info">
                         <div class="ordinfo">
@@ -44,9 +44,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+
         <div class="margin_contact">
             <p><strong><%= link_to "Pour toute autre question, n'hesitez pas à nous contacter", new_contact_path %></strong> </p>
         </div>
     </div>
-</div>
+      </div>
+      <%=render'shared/footer'%>
+
+
+</body>

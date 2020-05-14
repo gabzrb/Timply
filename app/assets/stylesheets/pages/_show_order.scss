@@ -14,7 +14,7 @@
 
 .card_order {
     width: 26vw;
-    height: 82vh;
+    padding: 30px;
     background-color: white;
     border-radius: 5px;
     display: flex;
@@ -92,7 +92,6 @@ border-bottom: 2px solid #518CE4;
 
 .card_order {
     width: 90vw;
-    height: 86vh;
     background-color: white;
     border-radius: 5px;
     display: flex;
@@ -104,7 +103,7 @@ border-bottom: 2px solid #518CE4;
 
 .card_info {
     width: 99% !important;
-    height: 55%;
+
     background-color: white;
     border-radius: 5px;
     display: flex;
@@ -126,7 +125,7 @@ and (-webkit-min-device-pixel-ratio: 2){
 
  .card_order {
     width: 90vw;
-    height: 82vh;
+
     background-color: white;
     border-radius: 5px;
     display: flex;
@@ -167,7 +166,6 @@ and (-webkit-min-device-pixel-ratio: 2){
             @media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) {
   .card_order {
     width: 40vw;
-    height: 82vh;
     background-color: white;
     border-radius: 5px;
     display: flex;

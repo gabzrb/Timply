@@ -1,7 +1,15 @@
-<div class="banner-confirmation-order" style="background-image:
- url(<%= image_path 'plein.png' %>);">
+<div class="banner_nostarifs" style="background-image: linear-gradient(to right top, #1460d1, #2173db, #3485e3, #4997eb, #60a9f1);">
+  <div class="banner-content">
+    <h2> Contactez-nous </h2>
+    <h4>Pour poser une question ou nous appeler, c’est ici !
+
+</h4>
+  </div>
+</div>
+<div class="container flex_contact">
+       <h2 style="color: #518CE4 "><strong></strong></h2>
+
 <div class="card_inscription">
-     <h2 style="color: #518CE4 "><strong>Posez-nous vos questions</strong></h2>
 <%= simple_form_for @contact, url: {action: "create"} do |f| %>
     <% if flash[:error].present? %>
         <p> flash[:error]</p>
@@ -17,19 +25,19 @@
       </div>
 
 
-          <div class="col-xs-6">
+          <div class="col-xs-12 col-md-6 ">
           <%= f.input :entreprise, required: false %>
            </div>
 
-   <div class="col-xs-6">
+   <div class="col-xs-12 col-md-6">
            <%= f.input :email,
                 required: true,
                 autofocus: true ,
-                 placeholder: "jepaiemestimbres@gmail.com",
+                 placeholder: "mestimbres@gmail.com",
                 input_html: { autocomplete: "email" }%>
       </div>
 
-       <div class="col-xs-12">
+       <div class="col-xs-12 col-md-12">
        <%= f.input :message, as: :text, required: false %>
        </div>
          </div>
@@ -39,14 +47,16 @@
           <%= f.submit 'Envoyer Message', class: "btn-inscription" %>
         </div>
          <% end %>
-
-
-         <div class="iconcontact">
+         </div>
+          </div>
+          <div class="container text-center">
+            <div class="iconcontact">
           <div class="phoneflex">
           <div class="phoneicon">
              <%=  image_tag"phone-call.png", :size => "70x70"%>
                </div>
-  <p>01 45 26 10 26 </p>
+  <p>01 45 26 10 26 <br> 07 69 92 05 55  <br>06 64 86 88 10 </p>
+
  </div>
 
  <div class="mailflex">
@@ -55,5 +65,6 @@
   <p> contact@timply.fr </p>
   </div>
   </div>
-          </div>
-        </div>
+</div>
+<%= render'shared/footer'%>
+
