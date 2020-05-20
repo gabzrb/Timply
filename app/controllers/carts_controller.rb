@@ -8,6 +8,6 @@ class CartsController < ApplicationController
   end
 
   def cart_confirmation
-    raise
+
   end
 end

@@ -24,13 +24,19 @@
     <% end %>
     <% if @orders.length != 0 %>
     <%= form_tag cart_payments_path(current_user.cart) do %>
+
+
+  <div class=" dashboard_card2">
     <article>
         <label class="amount">
-            <span>Montant: <%= humanized_money_with_symbol(@total) %></span>
+            <span><strong>Montant: <%= humanized_money_with_symbol(@total) %></strong></span>
         </label>
     </article>
+  </div>
+    <div class=" text-center">
+    <script src="https://checkout.stripe.com/checkout.js" data-key="<%= ENV['STRIPE_PUBLISHABLE_TEST_KEY'] %>" class="stripe-button { display: none } btn-cta " data-name="Timply" data-email="<%= current_user.email %>" data-description="<%= @sku %>" data-amount="<%= @total_cent %>" data-label="Payer" data-locale="auto" data-currency="<%= @user_cart.orders[0].price.currency %>"></script>
+    </div>
+    <% end %>
+    <% end %>
 
-    <script src="https://checkout.stripe.com/checkout.js" data-key="<%= ENV['STRIPE_PUBLISHABLE_TEST_KEY'] %>" class="stripe-button" data-name="Timply" data-email="<%= current_user.email %>" data-description="<%= @sku %>" data-amount="<%= @total_cent %>" data-label="Payer" data-locale="auto" data-currency="<%= @user_cart.orders[0].price.currency %>"></script>
-    <% end %>
-    <% end %>
 </div>
