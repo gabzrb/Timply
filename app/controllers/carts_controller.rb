@@ -8,6 +8,6 @@ class CartsController < ApplicationController
   end
 
   def cart_confirmation
-
+    @total = params[:total].to_f.round(2)
   end
 end

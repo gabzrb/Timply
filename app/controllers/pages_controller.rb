@@ -15,6 +15,7 @@ class PagesController < ApplicationController
       @orders.each do |order|
         (@all_reduction += order.reduction.to_f) if order.state == 'paid'
       end
+      @all_reduction = @all_reduction.round(2)
     end
   end
 
