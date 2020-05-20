@@ -16,11 +16,8 @@ Rails.application.routes.draw do
     resources :orders, only: [ :show, :create ] do
     end
   end
-<<<<<<< HEAD
   get '/cart_confirmation', to: 'carts#cart_confirmation'
   resources :carts, only: [:show] do
     resources :payments, only: [:new, :create]
   end
-=======
->>>>>>> master
 end
