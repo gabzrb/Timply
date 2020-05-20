@@ -1,9 +1,0 @@
-2019-01-13 20:06:23.854 IST [18436] LOG:  listening on IPv6 address "::1", port 5432
-2019-01-13 20:06:23.854 IST [18436] LOG:  listening on IPv4 address "127.0.0.1", port 5432
-2019-01-13 20:06:23.855 IST [18436] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
-2019-01-13 20:06:23.870 IST [18437] LOG:  database system was shut down at 2019-01-13 20:06:16 IST
-2019-01-13 20:06:23.876 IST [18436] LOG:  database system is ready to accept connections
-2019-01-25 08:54:21.870 IST [18436] LOG:  received smart shutdown request
-2019-01-25 08:54:21.877 IST [18436] LOG:  background worker "logical replication launcher" (PID 18443) exited with exit code 1
-2019-01-25 08:54:21.879 IST [18438] LOG:  shutting down
-2019-01-25 08:54:22.414 IST [18436] LOG:  database system is shut down

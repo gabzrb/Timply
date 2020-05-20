@@ -1,0 +1,19 @@
+<body class="banner-inscription" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);">
+  <div class="container flex-product3">
+    <div class="card_confirm_order2">
+      <h3 style="color: #308edc"> Merci pour votre commande! </h3>
+      <p id="longueur">Votre pack vous sera livré d'ici 1 semaine.Un numéro de suivi vous sera communiqué !</p>
+      <h4 style="color: #518CE4; margin-bottom: 7%;"> <strong> Montant: <%= @total %> €</strong></h4>
+      <div class="card_recapitulatif2">
+        <div class="line_confirmation">
+          <p>Date de la commande: <%=Time.now.strftime("%d/%m/%Y")%></p>
+          <p> <%= current_user.orders.last.created_at.strftime("%d-%m-%Y") %> </p>
+        </div>
+        <div class="redirection">
+          <p> <%= link_to "Voir mes commandes", dashboard_path %> </p>
+          <p> <%= link_to "Retour aux packs", dashboard_path %> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

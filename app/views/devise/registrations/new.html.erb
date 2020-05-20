@@ -1,106 +1,99 @@
- <body  class="banner-inscription" style="background-image:
- url(<%= image_path 'plein.png' %>);" >
+ <body class="banner-inscription" style="background-image:
+ url(<%= image_path 'plein.png' %>);">
+     <div class="container">
+         <div class="inscriptionflex">
+             <div class="card_inscription">
+                 <h2 style="color: #518CE4 "><strong>Inscription</strong></h2>
+                 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                 <%#= f.error_notification %>
+                 <div class="form-row">
 
+                     <div class="col-xs-12 col-md-6">
+                         <%= f.input :prenom, label: false, placeholder: "Prénom" %>
+                     </div>
 
+                     <div class="col-xs-12 col-md-6">
+                         <%= f.input :name, label: false, placeholder:"Nom" %>
+                     </div>
 
-<div class="container">
-
-   <div class="inscriptionflex">
-    <div class="card_inscription">
-       <h2 style="color: #518CE4 "><strong>Inscription</strong></h2>
-   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%#= f.error_notification %>
-  <div class="form-row">
-
-    <div class="col-xs-12 col-md-6">
-    <%= f.input :prenom, label: false, placeholder: "Prénom" %>
-      </div>
-
-    <div class="col-xs-12 col-md-6">
-    <%= f.input :name, label: false, placeholder:"Nom" %>
-      </div>
-
-       <div class="col-xs-6 col-md-6">
-           <%= f.input :email,
+                     <div class="col-xs-6 col-md-6">
+                         <%= f.input :email,
                 required: true,
                 autofocus: true ,
                  placeholder: "mestimbresmoinschere@gmail.com",
                 input_html: { autocomplete: "email" },
                 label: false;
                 %>
-      </div>
+                     </div>
 
-     <div class="col-xs-6 col-md-6">
-          <%= f.input :entreprise, placeholder:"Entreprise", label:false %>
-           </div>
+                     <div class="col-xs-6 col-md-6">
+                         <%= f.input :entreprise, placeholder:"Entreprise", label:false %>
+                     </div>
 
-        <div class="col-xs-6 col-md-6">
-            <%= f.input :password,
+                     <div class="col-xs-6 col-md-6">
+                         <%= f.input :password,
                 required: true,
                 label: false,
                 placeholder: "Mot de passe",
 
                 input_html: { autocomplete: "new-password" } %>
-        </div>
+                     </div>
 
-        <div class="col-xs-6 col-md-6">
-          <%= f.input :password_confirmation,
+                     <div class="col-xs-6 col-md-6">
+                         <%= f.input :password_confirmation,
                       label: false,
                       required: true,
                       input_html: { autocomplete: "new-password" },
                       placeholder:"Confirmation du mot de passe" %>
-        </div>
-               <div class="col-xs-12 col-md-6">
-             <%= f.input :phone, label: false,
+                     </div>
+                     <div class="col-xs-12 col-md-6">
+                         <%= f.input :phone, label: false,
                           required: true,
                           autofocus: true,
                           placeholder: "Telephone",
                           input_html: { autocomplete: "Telephone" }%>
-           </div>
+                     </div>
 
 
-           <div class="col-xs-12 col-md-6">
-             <%= f.input :address, label: false ,placeholder: "Adresse" %>
-           </div>
+                     <div class="col-xs-12 col-md-6">
+                         <%= f.input :address, label: false ,placeholder: "Adresse" %>
+                     </div>
 
-            <div class="col-xs-12 col-md-6">
-             <%= f.input :codepostal, label: false, placeholder: "Code Postal"  %>
-           </div>
+                     <div class="col-xs-12 col-md-6">
+                         <%= f.input :codepostal, label: false, placeholder: "Code Postal"  %>
+                     </div>
 
-           <div class="col-xs-12 col-md-6">
-             <%= f.input :ville, label: false, placeholder: "Ville" %>
-           </div>
-
-
-
-          <div class="col-xs-12 col-md-12">
-          <%= f.input :siret, placeholder: "Numéro de Siret", label: false %>
-          </div>
-        </div>
-        <div class="form-actions">
-      <%= f.button :submit, "S'inscrire", class: "btn-inscription"%>
-    </div>
-        <div class="confirm-data">
-            <%= f.input :comfirm_data, label: false, as: :boolean, boolean_style: :inline  %>
-              <label for="resource_confirm_data">J'accepte les  <%= link_to "Conditions d'Utilisations", conditionsgenerales_path %></label>
-       </div>
-      <div class="marginsupprimer">
-
-    <strong> <%= render "devise/shared/links" %> </strong>
-  </div>
-  </div>
+                     <div class="col-xs-12 col-md-6">
+                         <%= f.input :ville, label: false, placeholder: "Ville" %>
+                     </div>
 
 
-<% end %>
-</div>
-</div>
-</div>
+
+                     <div class="col-xs-12 col-md-12">
+                         <%= f.input :siret, placeholder: "Numéro de Siret", label: false %>
+                     </div>
+                 </div>
+                 <div class="confirm-data">
+                     <%= f.input :comfirm_data, label: false, as: :boolean, boolean_style: :inline  %>
+                     <label for="resource_confirm_data">J'accepte les <%= link_to "Conditions d'Utilisations", conditionsgenerales_path %></label>
+                 </div>
+                 <div class="form-actions">
+                     <%= f.button :submit, "S'inscrire", class: "btn-inscription"%>
+                 </div>
+                 <div class="marginsupprimer">
+
+                     <strong> <%= render "devise/shared/links" %> </strong>
+                 </div>
+             </div>
+
+
+             <% end %>
+         </div>
+     </div>
+     </div>
 
 
  </body>
 
 
-<!-- Modal -->
-
-
-
+ <!-- Modal -->

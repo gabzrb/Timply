@@ -1,27 +1,20 @@
-
-
 .card_password {
-    width: 32vw;
-    height: 49vh;
-    text-align: center;
-    background-color: white;
-    border-radius: 5px;
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 2%;
-    margin-top: 3%;
-    font-size: 13px;
+  width: 32vw;
+  height: 49vh;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2%;
+  margin-top: 3%;
+  font-size: 13px;
 }
 
-
-
-@media only screen
- and (min-device-width: 375px)
-and (max-width: 675px) {
-
-.card_password {
+@media only screen and (min-device-width: 375px) and (max-width: 675px) {
+  .card_password {
     width: 87vw;
     height: 61vh;
     text-align: center;
@@ -34,16 +27,10 @@ and (max-width: 675px) {
     margin-bottom: 2%;
     margin-top: 3%;
     font-size: 13px;
+  }
 }
 
-}
-
-
-
-@media only screen
- and (min-device-width: 768px)
-and (max-width: 1024px) {
-
+@media only screen and (min-device-width: 768px) and (max-width: 1024px) {
   .card_password {
     width: 50vw;
     height: 43vh;
@@ -57,19 +44,14 @@ and (max-width: 1024px) {
     margin-bottom: 2%;
     margin-top: 3%;
     font-size: 13px;
-}
+  }
 }
 
 .form-control {
-    font-size: 14px;
-    margin-right: 14px;
-
-  }
-
-abbr[title="required"] {
-  display: none;
+  font-size: 14px;
+  margin-right: 14px;
 }
 
-
-
-
+abbr[title='required'] {
+  display: none;
+}
