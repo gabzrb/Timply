@@ -1,27 +1,26 @@
 <div class="text-center dashboard_upcard">
-    <h2 style=" color: #ffffff">Mes économies: <%= @all_reduction %>EUR</h2>
-    <hr>
+  <h2 style=" color: #ffffff">Mes économies: <%= @all_reduction %> €</h2>
+  <hr>
 </div>
 <div class="body" style="background-color: #ffffff">
-    <hr>
-    <% @orders.each do |order| %>
-    <% if order.state == 'paid' %>
-    <div class="dashboard_card">
-        <%= image_tag(order.pack.photo) %>
-        <p><%= order.pack_sku %></p>
-        <p> <%= order.created_at.strftime("%d-%m-%Y") %> </p>
-        <p> <%= order.quantity %> Enveloppes </p>
-        <p> <%= order.format %> </p>
-        <% if order.tracking %>
-        <p> <%= link_to "https://packsdenveloppes.aftership.com/#{order.tracking}"%> </p>
-        <% else %>
-        <p>Votre numero de tracking est en cours de creation...</p>
-        <% end %>
-        <p> <%= order.weight %> </p>
-
-        <p><%= humanized_money_with_symbol(order.price) %></p>
-    </div>
-    <hr>
+  <hr>
+  <% @orders.each do |order| %>
+  <% if order.state == 'paid' %>
+  <div class="dashboard_card">
+    <%= image_tag(order.pack.photo) %>
+    <p><%= order.pack_sku %></p>
+    <p> <%= order.created_at.strftime("%d-%m-%Y") %> </p>
+    <p> <%= order.quantity %> Enveloppes </p>
+    <p> <%= order.format %> </p>
+    <% if order.tracking %>
+    <p> <%= link_to "https://packsdenveloppes.aftership.com/#{order.tracking}"%> </p>
+    <% else %>
+    <p>Votre numero de tracking est en cours de creation...</p>
     <% end %>
-    <% end %>
+    <p> <%= order.weight %> </p>
+    <p><%= humanized_money_with_symbol(order.price) %></p>
+  </div>
+  <hr>
+  <% end %>
+  <% end %>
 </div>
