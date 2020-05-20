@@ -51,7 +51,6 @@ def create
     end
     @order.user_id = current_user.id
     @order.pack_id = @pack.id
-    @order.cart_id = current_user.cart.id
     if @order.save
       redirect_to pack_order_path(@pack, @order)
     else
@@ -99,6 +98,6 @@ def create
   end
 
   def set_order
-    @order = Order.find(params[:id])
+    @order =  Order.find(params[:id])
   end
 end
