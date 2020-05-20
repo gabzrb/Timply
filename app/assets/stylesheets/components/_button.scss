@@ -1,9 +1,24 @@
+<<<<<<< HEAD
+.stripe-button-el span{
+  width: 98px;
+  font-family: "Montserrat";
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  border: 1px solid #308edc;
+  border-radius: 19px;
+  padding:  7px 17px;
+  color: #308edc;
+}
+=======
     .btn-primary {
     background-color: #ffffff;
     border: 1px solid #308edc;;
     border-radius: 19px;
    padding:  7px 17px;
   }
+>>>>>>> master
 
 
 
@@ -26,12 +41,34 @@
   }
 
 
- .btn-cta {
+.btn-tarifs {
     border: 1px solid #308edc;
-    border-radius: 7px;
+    border-radius: 25px;
     color: white;
     background-color: #308edc;
     padding: 11px 16px;
+    width: 18%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    align-self: center;
+  }
+
+.btn-cta2 {
+    border: 1px solid #308edc;
+    border-radius: 25px;
+    color: white;
+    background-color: #308edc;
+    align-self: center;
+  }
+
+ .btn-cta {
+    border: 1px solid #308edc;
+    border-radius: 25px;
+    color: white;
+    background-color: #308edc;
+    padding: 11px 16px;
+    width: 39%;
+    align-self: center;
   }
 
   .btn-cta a {
@@ -67,3 +104,5 @@
     margin-bottom: 14px;
     color: white;
  }
+
+

@@ -13,7 +13,6 @@ class Contact < MailForm::Base
       :subject => "Contact Form",
       :to => "contact@timply.fr",
       :from => %("#{prenom}" "#{name}" <#{email}>),
-
     }
   end
 end

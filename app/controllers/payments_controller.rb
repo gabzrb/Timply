@@ -1,26 +1,29 @@
 class PaymentsController < ApplicationController
-  before_action :set_order
+  before_action :set_cart
 
   def new
-    @pack = Pack.find(params[:pack_id])
   end
 
   def create
-    @pack = Pack.find(params[:pack_id])
     customer = Stripe::Customer.create(
       source: params[:stripeToken],
       email:  params[:stripeEmail]
     )
 
+    total = @cart.orders.map{|o| o.price_cents}.sum
 
     charge = Stripe::Charge.create(
       customer:     customer.id,   # You should store this customer id and re-use it.
-      amount:       @order.price_cents,
+      amount:       total,
       description:  "Paiment pour une commande de timbres",
-      currency:     @order.price.currency
+      currency:     @cart.orders.first.price.currency
     )
-    @order.update(payment: charge.to_json, state: 'paid')
-    redirect_to order_confirmation_path(@order)
+    @cart.orders.each do |order|
+       order.update(payment: charge.to_json, state: 'paid', cart_id: nil)
+    end
+    #TODO redirection to confirmation
+
+    redirect_to cart_confirmation_path(total: total)
 
   rescue Stripe::CardError => e
     flash[:alert] = e.message
@@ -29,7 +32,7 @@ class PaymentsController < ApplicationController
 
   private
 
-  def set_order
-    @order = current_user.orders.where(state: 'pending').find(params[:order_id])
+  def set_cart
+    @cart = current_user.cart
   end
 end
