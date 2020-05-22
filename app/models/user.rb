@@ -11,11 +11,12 @@ class User < ApplicationRecord
   after_create :connect_cart
   has_one :cart, dependent: :destroy
 
-  private
 
   def connect_cart
     Cart.create(user: self)
   end
+
+  private
 
   def send_welcome_email
     UserMailer.welcome(self).deliver_now
