@@ -1,6 +1,6 @@
 
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :mentionslegales, :apropos, :conditionsgenerales, :nostarif ]
+  skip_before_action :authenticate_user!, except: [ :dashboard ]
 
   def home
   end
