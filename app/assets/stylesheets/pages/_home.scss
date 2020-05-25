@@ -1,7 +1,6 @@
 // Specific CSS for your home-page
 .mentions {
-margin-top: 10px;
-
+  margin-top: 10px;
 }
 
 .phoneicon {
@@ -9,13 +8,14 @@ margin-top: 10px;
 }
 
 .phoneflex {
-    display: block;
-    align-items: center;
+  display: block;
+  align-items: center;
 }
 
 .mailflex {
-      display: block;
-    align-items: center;
+  display: block;
+  align-items: center;
+  margin-top: 4px;
 }
 
 .mailflex p {
@@ -27,13 +27,10 @@ margin-top: 10px;
 }
 
 .margin-icon {
-
-
 }
 
 .margin-watch {
-
-   margin-top: 10%;
+  margin-top: 10%;
 }
 
 .margin-watchsvg {
@@ -41,27 +38,21 @@ margin-top: 10px;
 }
 
 .margin-lasticon {
-
-   margin-top: 15%;
+  margin-top: 15%;
 }
-
 
 .wrapper {
-width: 100vw;
-margin-top: 6%;
-display: block;
-flex-direction: row;
-
+  width: 100vw;
+  margin-top: 6%;
+  display: block;
+  flex-direction: row;
 }
-
-
 
 .wrapper h3 {
   font-size: 24px;
-    color: #08264D;
-    font-weight: 200;
+  color: #08264d;
+  font-weight: 200;
 }
-
 
 .nounderline:hover {
   text-decoration: none;
@@ -71,60 +62,57 @@ flex-direction: row;
   margin-top: 10px;
 }
 
-
 .bluecta {
-width: 100vw;
-background-color: #08264D;
-margin-top: 4%;
-flex-direction: column;
-color: white;
-padding: 30px
+  width: 100vw;
+  background-color: #08264d;
+  margin-top: 4%;
+  flex-direction: column;
+  color: white;
+  padding: 30px;
 }
 
+.difference {
+  .row {
+    margin: 0 !important;
+  }
+}
 
-
-
-@media only screen  and (min-device-width: 360px) and (max-device-width: 640px){
-.svg-content svg{
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+  .svg-content svg {
     width: 300px;
     padding-left: 1px;
     padding-right: 12px;
   }
-
 }
 
-@media only screen
- and (min-device-width: 375px)
-and (max-width: 675px) {
-.svg-content svg{
+@media only screen and (min-device-width: 375px) and (max-width: 675px) {
+  .svg-content svg {
     width: 300px;
     padding-left: 15px;
   }
-
 }
 
-@media only screen
- and (min-device-width: 768px)
-and (max-width: 1024px) {
-
-.svg-content svg{
+@media only screen and (min-device-width: 768px) and (max-width: 1024px) {
+  .svg-content svg {
     width: 300px;
     padding-left: 15px;
   }
-
 }
 
 .iconcontact {
   margin-top: 35px;
   margin-left: 10px;
+  display: flex;
+  justify-content: center;
 }
-
 
 .iconcontact p {
   font-size: 15px;
-  color: #09264D;
+  color: #09264d;
 }
 
-
-
-
+.home-page-title {
+  color: #308edc;
+  font-size: 30px;
+  margin-top: 5vh;
+}

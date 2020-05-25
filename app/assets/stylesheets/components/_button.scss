@@ -1,14 +1,31 @@
-    .btn-primary {
-    background-color: #ffffff;
-    border: 1px solid #308edc;;
-    border-radius: 19px;
-   padding:  7px 17px;
+.stripe-button-el span{
+  width: 98px;
+  font-family: "Montserrat";
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  border: 1px solid #308edc;
+  border-radius: 19px;
+  padding:  7px 17px;
+  color: #308edc;
+}
+
+.btn-nav {
+  color: #308edc;
+  border: 1px solid #308edc;
+  border-radius: 19px;
+  padding:  7px 17px;
   }
 
+.btn-nav:hover {
+  background-color:#308edc;
+  color: #ffffff;
+}
 
 
  .btn-cta-nav  {
-   border: 1px solid #308edc;;
+   border: 1px solid #308edc;
    border-radius: 19px;
    color: white;
    background-color: #308edc;
@@ -26,12 +43,34 @@
   }
 
 
- .btn-cta {
+.btn-tarifs {
     border: 1px solid #308edc;
-    border-radius: 7px;
+    border-radius: 25px;
     color: white;
     background-color: #308edc;
     padding: 11px 16px;
+    width: 18%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    align-self: center;
+  }
+
+.btn-cta2 {
+    border: 1px solid #308edc;
+    border-radius: 25px;
+    color: white;
+    background-color: #308edc;
+    align-self: center;
+  }
+
+ .btn-cta {
+    border: 1px solid #308edc;
+    border-radius: 25px;
+    color: white;
+    background-color: #308edc;
+    padding: 11px 16px;
+    width: 39%;
+    align-self: center;
   }
 
   .btn-cta a {
@@ -60,10 +99,12 @@
 
 
 .btn-modal {
-       background-color: #308edc;;
-    padding: 0.375rem 15rem;
-    border-radius: 50px;
-    margin-top: 29px;
-    margin-bottom: 14px;
-    color: white;
+  background-color: #308edc;;
+  border-radius: 50px;
+  margin-top: 29px;
+  margin-bottom: 14px;
+  color: white;
+  width: 100%;
  }
+
+

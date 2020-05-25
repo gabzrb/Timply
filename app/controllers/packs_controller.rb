@@ -5,7 +5,7 @@ PCK = {"Lettre Verte": ["0.79", "0.88"],
 
 
 class PacksController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @packs = Pack.all

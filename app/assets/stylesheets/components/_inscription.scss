@@ -1,38 +1,31 @@
-
 .petitecard {
-      background-color: white;
-    padding: 60px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 16px;
-    margin-bottom: 30px;
-    /* height: 450px; */
-    color: black;
-    border-radius: 10px;
+  background-color: white;
+  padding: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 30px;
+  /* height: 450px; */
+  color: black;
+  border-radius: 10px;
 }
-
-
-
-
 
 .modal-dialog {
-    width: 489px;
-    margin: 30px auto;
+  width: 489px;
+  margin: 30px auto;
 }
 
-
 .modal-body {
-    position: relative;
-    padding: 46px;
+  position: relative;
+  padding: 46px;
 }
 
 .modal-header h3 {
   font-size: 25px;
 }
-
 
 .modal-content {
   font-size: 15px;

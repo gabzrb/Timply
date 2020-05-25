@@ -64,6 +64,17 @@
 
 }
 
+.dashboard_card2 {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    justify-content: flex-end;
+    align-items: center;
+      flex-grow: 1;
+      padding: 22px;
+
+}
+
 .dashboard_card img {
 
    border-radius: 10px;

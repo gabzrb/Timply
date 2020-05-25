@@ -1,11 +1,9 @@
 
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :mentionslegales, :apropos, :conditionsgenerales,]
+  skip_before_action :authenticate_user!, except: [ :dashboard ]
 
   def home
   end
-
-
 
   def dashboard
     @orders = Order.where(id: current_user.order_ids).reverse
@@ -15,6 +13,7 @@ class PagesController < ApplicationController
       @orders.each do |order|
         (@all_reduction += order.reduction.to_f) if order.state == 'paid'
       end
+      @all_reduction = @all_reduction.round(2)
     end
   end
 
@@ -38,5 +37,6 @@ class PagesController < ApplicationController
   def conditionsgenerales
   end
 
-
+  def nostarif
+  end
 end
