@@ -5,8 +5,6 @@ class PagesController < ApplicationController
   def home
   end
 
-
-
   def dashboard
     @orders = Order.where(id: current_user.order_ids).reverse
     @packs = Pack.where(id: current_user.order_ids)
