@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+##Timply
+La solution pour réduire vos coûts d'envoi !
+Courrier, lettre suivie, fini la perte de temps et d’argent !
