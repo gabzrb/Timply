@@ -1,42 +1,37 @@
 <div class="text-center dashboard_upcard">
-    <h2 style=" color: #ffffff">Mon Panier: <%= humanized_money_with_symbol(@total) %></h2>
-    <hr>
+  <h2 style=" color: #ffffff">Mon Panier: <%= humanized_money_with_symbol(@total) %></h2>
+  <hr>
 </div>
 <div class="body" style="background-color: #ffffff">
-    <hr>
-    <% @orders.each do |order| %>
-    <div class="dashboard_card">
-        <%= image_tag(order.pack.photo) %>
-        <p><%= order.pack_sku %></p>
-        <p> <%= order.created_at.strftime("%d-%m-%Y") %> </p>
-        <p> <%= order.quantity %> Enveloppes </p>
-        <p> <%= order.format %> </p>
-        <p> <%= order.tracking %> </p>
-        <p> <%= order.weight %> </p>
-
-        <p><%= humanized_money_with_symbol(order.price) %></p>
-
-        <%#= link_to "Payer", new_pack_order_payment_path(order.pack_id, order),class: "btn btn-cta_dashboard" if order.state == 'pending' %>
-
-        <%= link_to "Supprimer", order_path(order, cart: "cart"), method: :delete, data: {:confirm => "Etes-vous sure?" } if order.state == 'pending' %>
-    </div>
-    <hr>
-    <% end %>
-    <% if @orders.length != 0 %>
-    <%= form_tag cart_payments_path(current_user.cart) do %>
-
-
-  <div class=" dashboard_card2">
-    <article>
-        <label class="amount">
-            <span><strong>Montant: <%= humanized_money_with_symbol(@total) %></strong></span>
-        </label>
-    </article>
+  <hr>
+  <% @orders.each do |order| %>
+  <div class="dashboard_card">
+    <%= image_tag(order.pack.photo) %>
+    <p><%= order.pack_sku %></p>
+    <p> <%= order.created_at.strftime("%d-%m-%Y") %> </p>
+    <p> <%= order.quantity %> Enveloppes </p>
+    <p> <%= order.format %> </p>
+    <p> <%= order.tracking %> </p>
+    <p> <%= order.weight %> </p>
+    <p><%= humanized_money_with_symbol(order.price) %></p>
+    <%#= link_to "Payer", new_pack_order_payment_path(order.pack_id, order),class: "btn btn-cta_dashboard" if order.state == 'pending' %>
+    <%= link_to "Supprimer", order_path(order, cart: "cart"), method: :delete, data: {:confirm => "Etes-vous sure?" } if order.state == 'pending' %>
   </div>
-    <div class=" text-center">
-    <script src="https://checkout.stripe.com/checkout.js" data-key="<%= ENV['STRIPE_PUBLISHABLE_TEST_KEY'] %>" class="stripe-button { display: none } btn-cta " data-name="Timply" data-email="<%= current_user.email %>" data-description="<%= @sku %>" data-amount="<%= @total_cent %>" data-label="Payer" data-locale="auto" data-currency="<%= @user_cart.orders[0].price.currency %>"></script>
-    </div>
-    <% end %>
-    <% end %>
-
+  <hr>
+  <% end %>
+  <% if @orders.length != 0 %>
+  <div class="d-flex justify-content-center mb-3">
+    <button id="pay" class="btn btn-primary">Payer</button>
+  </div>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+  const paymentButton = document.getElementById('pay');
+  paymentButton.addEventListener('click', () => {
+    const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+    stripe.redirectToCheckout({
+        sessionId: '<%= @user_cart.checkout_session_id %>'
+    });
+  });
+  </script>
+  <% end %>
 </div>
