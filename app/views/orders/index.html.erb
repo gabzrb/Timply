@@ -3,6 +3,21 @@
   <div class="text-center">
     <h1>Admin Dashboard</h1>
   </div>
+  <form>
+  <div class="row mx-5">
+    <div class="col">
+    <select class="form-control" id="exampleFormControlSelect1" name='status' placeholder="Par status">
+      <option>all</option>
+      <option>pending</option>
+      <option>paid</option>
+    </select>
+    </div>
+    <div class="col">
+      <input type="text" name="query" class="form-control" placeholder="Par Nom ou Email">
+    </div>
+  <button type="submit" class="btn btn-primary mb-2">Trier</button>
+  </div>
+</form>
   <% @orders.each do |order| %>
     <div class="dashboard_card">
       <p><%= order.id %></p>

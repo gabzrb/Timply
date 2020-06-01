@@ -20,8 +20,16 @@ PACKS =
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :destroy, :edit, :update]
   before_action :check_admin, only: [:index]
+
   def index
-    @orders = Order.all
+    @orders = Order.all.reverse
+    @query = params[:query] == '' ? nil : params[:query].to_s
+    @status = params[:status] == 'all' ? nil : params[:status].to_s
+    if @query
+      @orders = Order.search(@query)
+    else
+      @orders.select! { |o| o.state == @status } if @status
+    end
   end
 
   def order_confirmation
