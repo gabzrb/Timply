@@ -1,4 +1,6 @@
 class Order < ApplicationRecord
+  searchkick
+
   belongs_to :user
   belongs_to :pack
   validates :category, presence: true

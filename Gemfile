@@ -24,6 +24,7 @@ gem "figaro"
 gem 'rest-client'
 gem 'sitemap_generator'
 gem "fog-aws"
+gem 'searchkick', '~> 3.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
