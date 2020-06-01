@@ -17,7 +17,5 @@ Rails.application.routes.draw do
     end
   end
   get '/cart_confirmation', to: 'carts#cart_confirmation'
-  resources :carts, only: [:show] do
-    resources :payments, only: [:new, :create]
-  end
+  resources :carts, only: [:show]
 end
