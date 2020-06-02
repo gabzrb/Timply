@@ -10,9 +10,9 @@ class Order < ApplicationRecord
 
   def search_data
     attributes.merge(
-      user_name: user(&:name)
-      user_email: user(&:email)
-      user_prenom: user(&:prenom)
+      user_name: user(&:name),
+      user_email: user(&:email),
+      user_prenom: user(&:prenom),
       user_phone: user(&:phone)
     )
   end
