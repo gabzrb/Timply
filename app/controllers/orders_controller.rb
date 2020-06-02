@@ -27,8 +27,10 @@ class OrdersController < ApplicationController
     @status = params[:status] == 'all' ? nil : params[:status].to_s
     if @query
       @orders = Order.search(@query)
-    else
+    elsif @status
       @orders.select! { |o| o.state == @status } if @status
+    else
+      @orders = Order.all.reverse
     end
   end
 
