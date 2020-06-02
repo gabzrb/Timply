@@ -24,7 +24,7 @@ gem "figaro"
 gem 'rest-client'
 gem 'sitemap_generator'
 gem "fog-aws"
-gem 'searchkick', '~> 3.0'
+gem 'searchkick'
 gem "elasticsearch"
 
 group :development do
