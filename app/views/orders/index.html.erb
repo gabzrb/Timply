@@ -28,7 +28,7 @@
       <th scope="col">Email</th>
       <th scope="col">Telephone</th>
       <th scope="col">Nom</th>
-       <th scope="col">Prenom</th>
+      <th scope="col">Prenom</th>
       <th scope="col">Format</th>
       <th scope="col">Status</th>
       <th scope="col">Montant</th>
@@ -44,8 +44,8 @@
       <td><%= order.created_at.strftime("%d-%m-%Y") %></td>
       <td><%= order.user.email %></td>
       <td><%= order.user.phone %></td>
-      <td><%= order.user.prenom %></td>
       <td><%= order.user.name %></td>
+      <td><%= order.user.prenom %></td>
       <td><%= order.format %></td>
       <td><%= order.state %></td>
       <td><%= order.price %>€</td>
