@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  searchkick
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
