@@ -1,8 +1,7 @@
- <body class="banner-inscription" style="background-image:
- url(<%= image_path 'plein.png' %>);">
+<div class="body" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);height: 100vh;">
      <div class="container">
          <div class="inscriptionflex">
-             <div class="card_inscription">
+             <div class="card_inscription mt-5">
                  <h2 style="color: #518CE4 "><strong>Inscription</strong></h2>
                  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
                  <%#= f.error_notification %>
@@ -97,6 +96,8 @@
  </body>
 
  <%= javascript_pack_tag 'address_autocomplete' %>
+
+
 
 
  <!-- Modal -->
