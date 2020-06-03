@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  include PgSearch::Model
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
