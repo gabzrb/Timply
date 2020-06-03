@@ -5,6 +5,11 @@ class PagesController < ApplicationController
   def home
   end
 
+  def user_show
+    redirect_to root_path if !(current_user.admin)
+    @user = User.find(params[:user_id])
+  end
+
   def dashboard
     @orders = Order.where(id: current_user.order_ids).reverse
     @packs = Pack.where(id: current_user.order_ids)

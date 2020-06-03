@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
-
+  get '/user_show', to: 'pages#user_show'
   get '/mentionslegales', to: 'pages#mentionslegales'
   get '/conditionsgenerales', to: 'pages#conditionsgenerales'
   get '/apropos', to: 'pages#apropos'
