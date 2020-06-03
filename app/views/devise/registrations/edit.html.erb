@@ -1,18 +1,19 @@
 <div class="banner-confirmation-order" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC); height: 100vh">
   <div class="card_edit">
     <h2 class='mt-3' style="color: #518CE4">Modifier mes informations </h2>
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= simple_form_for(current_user) do |f| %>
     <%= f.error_notification %>
     <%= f.input :email, required: true, autofocus: true %>
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
-    <%= f.input :prenom, label: "Prénom"%>
-    <%= f.input :name %>
-    <%= f.input :entreprise %>
-    <%= f.input :address %>
-    <%= f.input :codepostal, label: "Code Postal" %>
-    <%= f.input :ville, label: "Ville" %>
+    <%= f.input :prenom, label: "Prénom", required: true, autofocus: true %>
+    <%= f.input :name , required: true, autofocus: true %>
+    <%= f.input :phone, required: true, autofocus: true  %>
+    <%= f.input :entreprise, required: true, autofocus: true  %>
+    <%= f.input :address, required: true, autofocus: true  %>
+    <%= f.input :codepostal, label: "Code Postal", required: true, autofocus: true  %>
+    <%= f.input :ville, label: "Ville", required: true, autofocus: true  %>
     <%= f.input :siret %>
     <%= f.button :submit, "Modifier", class: "btn-inscription" %>
     <div class="marginsupprimer">
