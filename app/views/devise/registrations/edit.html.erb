@@ -1,36 +1,23 @@
-
-<div class="banner-confirmation-order" style="background-image:
- url(<%= image_path 'plein.png' %>);">
-
-    <div class="card_edit">
-      <h2 style="color: #518CE4">Modifier mes informations </h2>
-
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-        <%= f.error_notification %>
-          <%= f.input :email, required: true, autofocus: true %>
-
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-          <% end %>
-
-            <%= f.input :prenom, label: "Prénom"%>
-
-            <%= f.input :name %>
-          <%= f.input :entreprise %>
-
-          <%= f.input :address %>
-
-             <%= f.input :codepostal, label: "Code Postal" %>
-
-             <%= f.input :ville, label: "Ville" %>
-             <%= f.input :siret %>
-
-          <%= f.button :submit, "Modifier", class: "btn-inscription" %>
-          <div class="marginsupprimer">
-         <p><%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sur ?" }, method: :delete %>  </p>
-            </div>
-
-      <% end %>
- </div>
-
+<div class="banner-confirmation-order" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC); height: 100vh">
+  <div class="card_edit">
+    <h2 class='mt-3' style="color: #518CE4">Modifier mes informations </h2>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :email, required: true, autofocus: true %>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+    <% end %>
+    <%= f.input :prenom, label: "Prénom"%>
+    <%= f.input :name %>
+    <%= f.input :entreprise %>
+    <%= f.input :address %>
+    <%= f.input :codepostal, label: "Code Postal" %>
+    <%= f.input :ville, label: "Ville" %>
+    <%= f.input :siret %>
+    <%= f.button :submit, "Modifier", class: "btn-inscription" %>
+    <div class="marginsupprimer">
+      <p><%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sur ?" }, method: :delete %>  </p>
+    </div>
+    <% end %>
+  </div>
 </div>
