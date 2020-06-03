@@ -33,5 +33,7 @@ class CartsController < ApplicationController
     @cart.orders.each do |order|
        order.update!(payment: @cart.checkout_session_id, state: 'paid', cart_id: nil)
     end
+
+    redirect_to dashboard_path if @cart.orders.size == 0
   end
 end
