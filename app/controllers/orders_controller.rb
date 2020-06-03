@@ -23,14 +23,14 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all.reverse
-    @query = params[:query] == '' ? nil : params[:query].to_s
-    @status = params[:status] == 'all' ? nil : params[:status].to_s
-    if @query
-      @orders = Order.search(@query)
+    @query = params[:query] == '' ? nil : params[:query]
+    @status = params[:status] == 'all' ? nil : params[:status]
+    if @query && @status
+      @orders = Order.global_search(@query).sort_by(&:updated_at)
+    elsif @query
+      @orders = Order.global_search(@query).select { |o| o.state == @status }.sort_by(&:updated_at)
     elsif @status
-      @orders.select! { |o| o.state == @status } if @status
-    else
-      @orders = Order.all.reverse
+      @orders.select! { |o| o.state == @status }.sort_by(&:updated_at)
     end
   end
 

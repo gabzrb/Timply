@@ -13,7 +13,7 @@
     <p> <%= order.quantity %> Enveloppes </p>
     <p> <%= order.format %> </p>
     <% if order.tracking %>
-    <p> <%= link_to "https://packsdenveloppes.aftership.com/#{order.tracking}"%> </p>
+    <a href="https://packsdenveloppes.aftership.com/<%=order.tracking %>" target="_blank"><%= order.tracking %></a>
     <% else %>
     <p>Votre numero de tracking est en cours de creation...</p>
     <% end %>
