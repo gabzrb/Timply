@@ -18,21 +18,39 @@
   <button type="submit" class="btn btn-primary mb-2">Trier</button>
   </div>
 </form>
-  <% @orders.each do |order| %>
-    <div class="dashboard_card">
-      <p><%= order.id %></p>
-      <p><%= order.user_id %></p>
-      <p><%= order.user.email %></p>
-     <p> <%= order.created_at.strftime("%d-%m-%Y") %> </p>
-      <p><%= order.user.name  %></p>
-      <p><%= order.user.entreprise%></p>
-      <p>  <%= order.format %> </p>
-
-      <p><%= order.state %></p>
-      <p><%= order.price %>€</p>
-      <p><%= link_to "Tracking Number: #{order.tracking}", edit_order_path(order) %></p>
-      <p><%= link_to "Effacer la commande", order_path(order), method: :delete  if order.state == 'pending'%></p>
-    </div>
-    <hr>
-  <% end %>
+<div class="table-responsive">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Order ID</th>
+      <th scope="col">User ID</th>
+      <th scope="col">Date</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telephone</th>
+      <th scope="col">Username</th>
+      <th scope="col">Format</th>
+      <th scope="col">Status</th>
+      <th scope="col">Montant</th>
+      <th scope="col">Tracking Number</th>
+      <th scope="col">Effacer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+    <tr class="<%= order.state == 'paid' ? 'table-success' : 'table-warning' %>">
+      <th scope="row"><%= order.id %></th>
+      <td><%= order.user_id %></td>
+      <td><%= order.created_at.strftime("%d-%m-%Y") %></td>
+      <td><%= order.user.email %></td>
+      <td><%= order.user.phone %></td>
+      <td><%= order.user.name %></td>
+      <td><%= order.format %></td>
+      <td><%= order.state %></td>
+      <td><%= order.price %>€</td>
+      <td><%= link_to "#{order.tracking ? order.tracking : 'Add Tracking no'}", edit_order_path(order) %></td>
+      <td><%= link_to "🗑", order_path(order), method: :delete  if order.state == 'pending'%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 </div>
