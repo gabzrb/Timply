@@ -8,7 +8,6 @@ class Order < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :global_search,
-    against: [ :price, :state, :pack_sku ],
     associated_against: {
       user: [ :name, :email, :prenom, :phone ]
     },
