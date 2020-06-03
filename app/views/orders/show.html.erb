@@ -1,56 +1,53 @@
 <body class="banner-inscription" style="background: linear-gradient(#0052D4, #4364F7,#6FB1FC);">
-
-<div class="flex-product2">
-
+  <div class="flex-product2">
     <div class="container text-center">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="card_order">
-                            <h3 style="color: #518CE4  "> <%= humanized_money_with_symbol(@order.price) %></h3>
-                            <div class="line_category">
-                                <p><strong><%= @order.category  %></strong> </p>
-                            </div>
-                            <div>
-                                <p> <strong>Quantité:</strong> <%= @order.quantity  %> enveloppes </p>
-                                <p> <strong>Poids:</strong> <%= @order.weight %></p>
-                                <p> <strong>Format d'enveloppe:</strong> <%= @order.format %></p>
-                                <% if @order.pb %>
-                                <p> <strong>Papier Bulle</strong></p>
-                                <% end %>
-                                <% if @order.ar %>
-                                <p> <strong>Avec Accusée de Réception</strong></p>
-                                <% end %>
-
-                            </div>
-                            <div class="line">
-                                <p> Tarif des enveloppes pré-timbrés de la Poste: <%= humanized_money_with_symbol(@la_poste_price) %></p>
-                                <p style="color: #518CE4">Reduction: <%= humanized_money_with_symbol(@reduction) %></p>
-                            </div>
-                            <%= link_to "Ajouter à mon panier", cart_path(
-    current_user.cart),class: "btn   btn-cta2 center-block"%>
-                        </div>
-                    </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                    <div class="card_info">
-                        <div class="ordinfo">
-                            <%= image_tag   "loupe.png", height: 120 %>
-                            <p> Verifiez le type d'envoi et la quantité.</p>
-                            <%= image_tag   "growth.png", height: 120 %>
-                            <p>Ajouter votre commande afin de pouvoir procéder au paiement. Vous pourrez toujours y revenir plus tard une fois tous vos packs choisis.</p>
-                            <%= image_tag   "suivi.png", height: 120 %>
-                            <p> Envoi de votre pack en colissimo recommandé. </p>
-                        </div>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="card_order">
+            <h3 style="color: #518CE4  "> <%= humanized_money_with_symbol(@order.price) %></h3>
+            <div class="line_category">
+              <p><strong><%= @order.category  %></strong> </p>
             </div>
-
-        <div class="margin_contact">
-            <p><strong><%= link_to "Pour toute autre question, n'hesitez pas à nous contacter", new_contact_path %></strong> </p>
+            <div>
+              <p> <strong>Quantité:</strong> <%= @order.quantity  %> enveloppes </p>
+              <p> <strong>Poids:</strong> <%= @order.weight %></p>
+              <p> <strong>Format d'enveloppe:</strong> <%= @order.format %></p>
+              <% if @order.pb %>
+              <p> <strong>Papier Bulle</strong></p>
+              <% end %>
+              <% if @order.ar %>
+              <p> <strong>Avec Accusée de Réception</strong></p>
+              <% end %>
+            </div>
+            <div class="line">
+              <p> Tarif des enveloppes pré-timbrés de la Poste: <%= humanized_money_with_symbol(@la_poste_price) %></p>
+              <p style="color: #518CE4">Reduction: <%= humanized_money_with_symbol(@reduction) %></p>
+            </div>
+            <% if params[:admin] %>
+            <%= link_to "Retour Page Admin", orders_path, class: "btn btn-cta2 center-block"%>
+            <% else %>
+            <%= link_to "Ajouter à mon panier", cart_path(
+            current_user.cart),class: "btn   btn-cta2 center-block"%>
+            <% end %>
+          </div>
         </div>
-    </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="card_info">
+            <div class="ordinfo">
+              <%= image_tag   "loupe.png", height: 120 %>
+              <p> Verifiez le type d'envoi et la quantité.</p>
+              <%= image_tag   "growth.png", height: 120 %>
+              <p>Ajouter votre commande afin de pouvoir procéder au paiement. Vous pourrez toujours y revenir plus tard une fois tous vos packs choisis.</p>
+              <%= image_tag   "suivi.png", height: 120 %>
+              <p> Envoi de votre pack en colissimo recommandé. </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <%=render'shared/footer'%>
-
-
+      <div class="margin_contact">
+        <p><strong><%= link_to "Pour toute autre question, n'hesitez pas à nous contacter", new_contact_path %></strong> </p>
+      </div>
+    </div>
+  </div>
+  <%=render'shared/footer'%>
 </body>
