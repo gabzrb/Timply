@@ -1,6 +1,6 @@
-PCK = {"Lettre Verte": ["0.79", "0.88"],
+PCK = {"Lettre Verte": ["0.87", "0.97"],
        "Lettre Prioritaire": ["0.94","1.05"],
-       "Lettre Suivie": ["1.29","1,45"],
+       "Lettre Suivie": ["1.27","1,45"],
        "Recommandés": ["3,98","4.18"]}
 
 
