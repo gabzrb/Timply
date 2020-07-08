@@ -1,7 +1,7 @@
 PCK = {"Lettre Verte": ["0.87", "0.97"],
        "Lettre Prioritaire": ["0.94","1.05"],
-       "Lettre Suivie": ["1.27","1,45"],
-       "Recommandés": ["3,87","4.30"]}
+       "Lettre Suivie": ["1.27","1.45"],
+       "Recommandées": ["3.98","4.18"], }
 
 
 class PacksController < ApplicationController
