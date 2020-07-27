@@ -41,7 +41,7 @@
     <tr class="<%= order.state == 'paid' ? 'table-success' : 'table-warning' %>">
       <th scope="row"><%= link_to order.id, pack_order_path(order.pack, order, admin: true) %></th>
       <td><%= link_to order.user_id, user_show_path(user_id: order.user.id) %></td>
-      <td><%= order.created_at.strftime("%d-%m-%Y") %></td>
+      <td><%= order.updated_at.strftime("%d-%m-%Y") %></td>
       <td><%= order.user.email %></td>
       <td><%= order.user.phone %></td>
       <td><%= order.user.name %></td>
