@@ -3,11 +3,12 @@ ruby '2.7.1'
 
 gem 'bootsnap', require: false
 gem 'devise'
+gem "spring", group: :development
 gem 'sendgrid-ruby'
 gem 'sendgrid-actionmailer'
 gem 'jbuilder', '~> 2.0'
 gem 'sassc-rails'
-gem 'pg', '~> 0.21'
+gem 'pg'
 gem 'puma'
 gem 'rails'
 gem 'redis'
